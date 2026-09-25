@@ -306,45 +306,40 @@
       border-radius: var(--radius-pill);
     }
 
-    /* ================= 3. ELEGANT ARCHITECTURAL BENTO HERO ================= */
-    .hero-section {
-      padding: 15px 0 25px;
-      position: relative;
+    /* ================= 3. FULL-WIDTH EDGE-TO-EDGE ARCHITECTURAL HERO ================= */
+    .hero-fw-section {
       width: 100%;
-    }
-
-    .hero-clean-container {
       background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-card); /* 26px */
-      padding: clamp(32px, 4vw, 56px);
-      box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.06), 0 0 1px rgba(15, 23, 42, 0.08);
+      border-bottom: 1px solid var(--border);
       position: relative;
       overflow: hidden;
     }
 
-    .hero-clean-grid {
+    .hero-fw-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: clamp(24px, 4vw, 48px);
-      align-items: center;
+      grid-template-columns: minmax(460px, 1.15fr) 0.85fr;
+      min-height: 580px;
+      align-items: stretch;
+      width: 100%;
     }
 
     @media (max-width: 960px) {
-      .hero-clean-grid {
+      .hero-fw-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
       }
     }
 
     /* Левая колонка */
-    .hero-left-content {
+    .hero-fw-col-left {
+      padding: clamp(36px, 5vw, 68px) clamp(24px, 5vw, 80px);
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      justify-content: center;
+      background: #FFFFFF;
+      z-index: 2;
     }
 
-    .hero-clean-badge {
+    .hero-fw-badge {
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -355,11 +350,12 @@
       font-size: 0.8rem;
       font-weight: 700;
       color: #E63E00;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       letter-spacing: 0.02em;
+      align-self: flex-start;
     }
 
-    .hero-clean-badge .badge-dot-live {
+    .hero-fw-badge .badge-dot-live {
       width: 8px;
       height: 8px;
       border-radius: 50%;
@@ -368,31 +364,31 @@
       animation: pulseDot 2s infinite ease-in-out;
     }
 
-    .hero-main-title {
+    .hero-fw-title {
       font-family: var(--font-heading);
-      font-size: clamp(2.1rem, 3.6vw, 3.2rem);
-      line-height: 1.16;
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      line-height: 1.14;
       font-weight: 800;
       color: #0F172A;
       letter-spacing: -0.025em;
       margin-bottom: 18px;
     }
 
-    .hero-title-accent {
+    .hero-fw-accent {
       color: var(--accent);
       display: inline-block;
     }
 
-    .hero-main-desc {
-      font-size: 1.05rem;
+    .hero-fw-desc {
+      font-size: 1.08rem;
       line-height: 1.65;
       color: #475569;
       margin-bottom: 28px;
-      max-width: 580px;
+      max-width: 600px;
     }
 
     /* Быстрая капсула записи */
-    .hero-booking-capsule {
+    .hero-fw-form {
       width: 100%;
       max-width: 540px;
       background: #F8FAFC;
@@ -407,13 +403,13 @@
       margin-bottom: 14px;
     }
 
-    .hero-booking-capsule:focus-within {
+    .hero-fw-form:focus-within {
       background: #FFFFFF;
       border-color: var(--accent);
       box-shadow: 0 6px 20px rgba(255, 72, 0, 0.12);
     }
 
-    .hero-booking-input-wrap {
+    .hero-fw-input-wrap {
       display: flex;
       align-items: center;
       gap: 10px;
@@ -421,7 +417,7 @@
       min-width: 0;
     }
 
-    .hero-booking-input {
+    .hero-fw-input {
       width: 100%;
       border: none;
       background: transparent;
@@ -432,17 +428,17 @@
       color: #0F172A;
     }
 
-    .hero-booking-input::placeholder {
+    .hero-fw-input::placeholder {
       color: #94A3B8;
       font-weight: 500;
     }
 
-    .hero-booking-submit {
+    .hero-fw-btn {
       background: var(--accent);
       color: #FFFFFF;
       border: none;
       border-radius: var(--radius-pill);
-      padding: 13px 24px;
+      padding: 14px 26px;
       font-family: var(--font-body);
       font-size: 0.92rem;
       font-weight: 700;
@@ -455,31 +451,31 @@
       box-shadow: 0 4px 12px rgba(255, 72, 0, 0.25);
     }
 
-    .hero-booking-submit:hover {
+    .hero-fw-btn:hover {
       background: var(--accent-hover);
       transform: translateY(-1px);
       box-shadow: 0 6px 18px rgba(255, 72, 0, 0.35);
     }
 
     @media (max-width: 580px) {
-      .hero-booking-capsule {
+      .hero-fw-form {
         flex-direction: column;
         border-radius: 20px;
         padding: 12px;
       }
-      .hero-booking-input-wrap {
+      .hero-fw-input-wrap {
         width: 100%;
         padding: 6px 8px;
       }
-      .hero-booking-submit {
+      .hero-fw-btn {
         width: 100%;
         justify-content: center;
         padding: 14px;
       }
     }
 
-    /* Мета-ссылки под формой */
-    .hero-meta-row {
+    /* Мета-информация под формой */
+    .hero-fw-meta {
       display: flex;
       align-items: center;
       gap: 12px;
@@ -487,10 +483,10 @@
       font-size: 0.85rem;
       color: #64748B;
       font-weight: 600;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
-    .hero-meta-item {
+    .meta-tag-free {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -503,11 +499,11 @@
       background: #10B981;
     }
 
-    .hero-meta-sep {
+    .meta-sep {
       color: #CBD5E1;
     }
 
-    .hero-meta-wa {
+    .meta-link-wa {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -516,34 +512,34 @@
       transition: color 0.2s ease;
     }
 
-    .hero-meta-wa:hover {
+    .meta-link-wa:hover {
       color: #10B981;
     }
 
     /* 3 карточки преимуществ */
-    .hero-perks-grid {
+    .hero-fw-perks {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: 16px;
       width: 100%;
       border-top: 1px solid var(--border);
-      padding-top: 22px;
+      padding-top: 24px;
     }
 
     @media (max-width: 680px) {
-      .hero-perks-grid {
+      .hero-fw-perks {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 12px;
       }
     }
 
-    .hero-perk-card {
+    .hero-fw-perk-item {
       display: flex;
       align-items: flex-start;
       gap: 10px;
     }
 
-    .perk-icon-circle {
+    .fw-perk-icon {
       width: 26px;
       height: 26px;
       border-radius: 50%;
@@ -556,65 +552,71 @@
       margin-top: 2px;
     }
 
-    .perk-text {
+    .fw-perk-desc {
       display: flex;
       flex-direction: column;
       gap: 2px;
     }
 
-    .perk-text strong {
+    .fw-perk-desc strong {
       font-size: 0.86rem;
       font-weight: 700;
       color: #0F172A;
       line-height: 1.25;
     }
 
-    .perk-text span {
+    .fw-perk-desc span {
       font-size: 0.76rem;
       color: #64748B;
       line-height: 1.3;
     }
 
-    /* Правая визуальная витрина */
-    .hero-showcase-box {
+    /* Правая колонка: полноразмерная витрина потолка до правого края */
+    .hero-fw-col-right {
       position: relative;
-      border-radius: 22px;
       overflow: hidden;
-      height: 100%;
-      min-height: 440px;
-      border: 1px solid var(--border);
-      box-shadow: 0 16px 36px -10px rgba(15, 23, 42, 0.1);
+      width: 100%;
+      min-height: 480px;
+      background: #0F172A;
     }
 
     @media (max-width: 960px) {
-      .hero-showcase-box {
-        min-height: 320px;
+      .hero-fw-col-right {
+        min-height: 360px;
+        height: 360px;
       }
     }
 
-    .hero-showcase-img {
+    .hero-fw-media-container {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-fw-photo {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.5s ease;
+      transition: transform 0.6s ease;
     }
 
-    .hero-showcase-box:hover .hero-showcase-img {
+    .hero-fw-col-right:hover .hero-fw-photo {
       transform: scale(1.02);
     }
 
-    /* Плавающие стеклянные плашки на фото */
-    .hero-glass-pill {
+    /* Плавающие стеклянные плашки */
+    .hero-fw-chip {
       position: absolute;
       background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.7);
       border-radius: var(--radius-pill);
-      padding: 8px 16px;
+      padding: 8px 18px;
       color: #0F172A;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 700;
       display: inline-flex;
       align-items: center;
@@ -623,34 +625,35 @@
       z-index: 2;
     }
 
-    .hero-glass-pill.top-pill {
-      top: 20px;
-      left: 20px;
+    .hero-fw-chip.chip-top {
+      top: 24px;
+      left: 24px;
     }
 
-    .hero-glass-pill.mid-pill {
-      top: 68px;
-      left: 20px;
+    .hero-fw-chip.chip-mid {
+      top: 76px;
+      left: 24px;
     }
 
-    .glass-pill-dot {
+    .chip-dot-accent {
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background: var(--accent);
     }
 
-    .hero-glass-review {
+    .hero-fw-rating-card {
       position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      background: rgba(15, 23, 42, 0.85);
+      bottom: 24px;
+      left: 24px;
+      right: 24px;
+      max-width: 440px;
+      background: rgba(15, 23, 42, 0.88);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 18px;
-      padding: 14px 18px;
+      padding: 14px 20px;
       display: flex;
       align-items: center;
       gap: 16px;
@@ -659,28 +662,97 @@
       z-index: 2;
     }
 
-    .hero-review-stars {
+    .rating-stars-gold {
       color: #F59E0B;
       font-size: 1.15rem;
       letter-spacing: 2px;
       line-height: 1;
     }
 
-    .hero-review-info {
+    .rating-card-text {
       display: flex;
       flex-direction: column;
       gap: 2px;
     }
 
-    .hero-review-info strong {
+    .rating-card-text strong {
       font-size: 0.88rem;
       font-weight: 700;
       color: #FFFFFF;
     }
 
-    .hero-review-info span {
+    .rating-card-text span {
       font-size: 0.76rem;
       color: #94A3B8;
+    }
+
+    /* Полноширинная плашка статистики (от левого края до правого) */
+    .hero-fw-stats-bar {
+      width: 100%;
+      background: #F8FAFC;
+      border-top: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .hero-fw-stats-grid {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4vw, 60px);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .stat-pill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .stat-pill-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .stat-pill-val {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.2;
+    }
+
+    .stat-pill-lbl {
+      font-size: 0.8rem;
+      color: #64748B;
+      margin-top: 3px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 880px) {
+      .hero-fw-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .stat-pill-item:nth-child(2)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-fw-stats-grid {
+        grid-template-columns: 1fr;
+      }
+      .stat-pill-item::after {
+        display: none !important;
+      }
     }
 
     /* ================= 4. БЕГУЩАЯ СТРОКА (ЗАКРУГЛЕННАЯ) ================= */
@@ -2348,110 +2420,130 @@
     </div>
   </div>
 
-  <!-- ================= 2. ПЕРВЫЙ ЭКРАН (ARCHITECTURAL BENTO HERO) ================= -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="hero-clean-container reveal-on-scroll">
-        <div class="hero-clean-grid">
+  <!-- ================= 2. ПЕРВЫЙ ЭКРАН (FULL-WIDTH ARCHITECTURAL HERO) ================= -->
+  <section class="hero-fw-section">
+    <div class="hero-fw-grid">
+      
+      <!-- Левая колонка: Текст, форма, преимущества -->
+      <div class="hero-fw-col-left reveal-on-scroll">
+        <div class="hero-fw-badge">
+          <span class="badge-dot-live"></span>
+          <span>Студия натяжных потолков • г. Урай с 2011 года</span>
+        </div>
+
+        <h1 class="hero-fw-title">
+          Премиальные натяжные потолки <br>
+          <span class="hero-fw-accent">& дизайнерский свет</span> в г. Урай
+        </h1>
+
+        <p class="hero-fw-desc">
+          Безупречная геометрия теневых систем EuroKRAAB, скрытые световые линии и экологичные полотна MSD. Чистый монтаж перфоратором с пылесосом за 1 день с гарантией по договору до 15 лет.
+        </p>
+
+        <!-- Быстрая капсула вызова мастера на замер -->
+        <form class="hero-fw-form" id="heroQuickForm">
+          <div class="hero-fw-input-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <input type="tel" class="hero-fw-input" id="heroPhoneInput" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <button type="submit" class="hero-fw-btn">
+            <span>Записаться на замер (0 ₽)</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+
+        <!-- Строка мета-информации -->
+        <div class="hero-fw-meta">
+          <div class="meta-tag-free">
+            <span class="meta-dot-green"></span>
+            <span>Бесплатный выезд технолога с каталогом материалов</span>
+          </div>
+          <span class="meta-sep">•</span>
+          <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="meta-link-wa">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <span>WhatsApp: +7 (908) 896-73-72</span>
+          </a>
+        </div>
+
+        <!-- Буллеты надежности -->
+        <div class="hero-fw-perks">
+          <div class="hero-fw-perk-item">
+            <div class="fw-perk-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF4800" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="fw-perk-desc">
+              <strong>Монтаж без пыли</strong>
+              <span>перфоратором с пылесосом</span>
+            </div>
+          </div>
+          <div class="hero-fw-perk-item">
+            <div class="fw-perk-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF4800" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="fw-perk-desc">
+              <strong>Оплата по факту</strong>
+              <span>только после окончания работ</span>
+            </div>
+          </div>
+          <div class="hero-fw-perk-item">
+            <div class="fw-perk-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF4800" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="fw-perk-desc">
+              <strong>Рассрочка 0%</strong>
+              <span>без процентов и банков</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая колонка: Полноэкранная витрина потолка (от центра до правого края) -->
+      <div class="hero-fw-col-right reveal-on-scroll">
+        <div class="hero-fw-media-container">
+          <img src="./assets/images/work-lines-cylinders.png" alt="Дизайнерский натяжной потолок в Урае" class="hero-fw-photo">
           
-          <!-- Левая колонка: Текст и действие -->
-          <div class="hero-left-content">
-            <div class="hero-clean-badge">
-              <span class="badge-dot-live"></span>
-              <span>Студия натяжных потолков • г. Урай с 2011 года</span>
-            </div>
-
-            <h1 class="hero-main-title">
-              Премиальные натяжные потолки <br>
-              <span class="hero-title-accent">& дизайнерский свет</span> в г. Урай
-            </h1>
-
-            <p class="hero-main-desc">
-              Безупречная геометрия теневых систем EuroKRAAB, скрытые световые линии и премиальные полотна MSD. Чистый монтаж перфоратором с пылесосом за 1 день с гарантией по договору.
-            </p>
-
-            <!-- Быстрая форма записи на замер -->
-            <form class="hero-booking-capsule" id="heroQuickForm">
-              <div class="hero-booking-input-wrap">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <input type="tel" class="hero-booking-input" id="heroPhoneInput" placeholder="+7 (___) ___-__-__" required>
-              </div>
-              <button type="submit" class="hero-booking-submit">
-                <span>Записаться на замер (0 ₽)</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </form>
-
-            <!-- Мета-информация -->
-            <div class="hero-meta-row">
-              <div class="hero-meta-item">
-                <span class="meta-dot-green"></span>
-                <span>Выезд мастера с образцами — бесплатно (0 ₽)</span>
-              </div>
-              <span class="hero-meta-sep">•</span>
-              <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="hero-meta-wa">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                <span>Чат в WhatsApp</span>
-              </a>
-            </div>
-
-            <!-- Буллеты надежности -->
-            <div class="hero-perks-grid">
-              <div class="hero-perk-card">
-                <div class="perk-icon-circle">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF4800" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="perk-text">
-                  <strong>Монтаж без пыли</strong>
-                  <span>с перфоратором и пылесосом</span>
-                </div>
-              </div>
-              <div class="hero-perk-card">
-                <div class="perk-icon-circle">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF4800" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="perk-text">
-                  <strong>Оплата по факту</strong>
-                  <span>только после приемки работ</span>
-                </div>
-              </div>
-              <div class="hero-perk-card">
-                <div class="perk-icon-circle">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF4800" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="perk-text">
-                  <strong>Рассрочка 0%</strong>
-                  <span>без банков и переплат</span>
-                </div>
-              </div>
-            </div>
-
+          <!-- Плавающие плашки -->
+          <div class="hero-fw-chip chip-top">
+            <span class="chip-dot-accent"></span>
+            <span>EuroKRAAB 2.0 • Теневой зазор</span>
           </div>
 
-          <!-- Правая колонка: Визуальная витрина интерьера -->
-          <div class="hero-right-visual">
-            <div class="hero-showcase-box">
-              <img src="./assets/images/hero-ceilings-composite.jpg" alt="Дизайнерские потолки NewLine в г. Урай" class="hero-showcase-img">
-              
-              <div class="hero-glass-pill top-pill">
-                <span class="glass-pill-dot"></span>
-                <span>EuroKRAAB 2.0 • Теневой профиль</span>
-              </div>
-
-              <div class="hero-glass-pill mid-pill">
-                <span>Световые линии SWG</span>
-              </div>
-
-              <div class="hero-glass-review">
-                <div class="hero-review-stars">★★★★★</div>
-                <div class="hero-review-info">
-                  <strong>4.9 из 5 в г. Урай</strong>
-                  <span>Более 1 000 выполненных проектов</span>
-                </div>
-              </div>
-            </div>
+          <div class="hero-fw-chip chip-mid">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span>Световые линии SWG</span>
           </div>
 
+          <!-- Карточка социального доверия -->
+          <div class="hero-fw-rating-card">
+            <div class="rating-stars-gold">★★★★★</div>
+            <div class="rating-card-text">
+              <strong>4.9 из 5 в г. Урай</strong>
+              <span>Более 1 000 выполненных проектов с 2011 года</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Полноширинная плашка метрик от левого края до правого -->
+    <div class="hero-fw-stats-bar">
+      <div class="hero-fw-stats-grid">
+        <div class="stat-pill-item">
+          <span class="stat-pill-val">13+ лет</span>
+          <span class="stat-pill-lbl">Опыта работы в г. Урай</span>
+        </div>
+        <div class="stat-pill-item">
+          <span class="stat-pill-val">1 000+</span>
+          <span class="stat-pill-lbl">Сданных комнат и квартир</span>
+        </div>
+        <div class="stat-pill-item">
+          <span class="stat-pill-val">0% пыли</span>
+          <span class="stat-pill-lbl">Монтаж перфоратором с пылесосом</span>
+        </div>
+        <div class="stat-pill-item">
+          <span class="stat-pill-val">15 лет</span>
+          <span class="stat-pill-lbl">Гарантия в договоре на полотна</span>
         </div>
       </div>
     </div>
