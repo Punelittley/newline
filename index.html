@@ -16,10 +16,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23FF4800'/><path d='M25 75 L25 25 L45 25 L75 75 L75 25' stroke='white' stroke-width='12' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 
-  <!-- Google Fonts: Manrope -->
+  <!-- Google Fonts: Unbounded & Onest -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -51,7 +51,9 @@
       --shadow-pill: 0 4px 14px rgba(255, 72, 0, 0.25);
       --shadow-wa: 0 4px 14px rgba(37, 211, 102, 0.22);
       
-      --font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-body: 'Onest', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-heading: 'Unbounded', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-family: var(--font-body);
     }
 
     html {
@@ -64,9 +66,14 @@
     body {
       background-color: var(--bg-page);
       color: var(--text-main);
-      font-family: var(--font-family);
+      font-family: var(--font-body);
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .brand-title, .section-title, .card-title, .tariff-name, .bento-metric-val, .bento-price-head-title, .footer-brand {
+      font-family: var(--font-heading);
+      letter-spacing: -0.03em;
     }
 
     .container {
@@ -299,67 +306,45 @@
       border-radius: var(--radius-pill);
     }
 
-    /* ================= 3. DARK SENSE-STYLE HERO SECTION ================= */
+    /* ================= 3. ARCHITECTURAL BENTO HERO ================= */
     .hero-section {
-      padding: 0 0 20px;
+      padding: 10px 0 30px;
       position: relative;
       width: 100%;
-      overflow: hidden;
-      background: #07090E;
     }
 
-    .hero-bento {
-      width: 100%;
-      background: 
-        radial-gradient(circle at 75% 25%, rgba(139, 92, 246, 0.22) 0%, transparent 45%),
-        radial-gradient(circle at 25% 65%, rgba(255, 72, 0, 0.18) 0%, transparent 45%),
-        linear-gradient(180deg, #07090E 0%, #0A0E17 100%);
-      padding: clamp(60px, 7vw, 95px) clamp(20px, 4vw, 60px) clamp(50px, 5vw, 70px);
+    .hero-arch-container {
+      background: linear-gradient(175deg, #0B0F17 0%, #111827 60%, #0F172A 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-card); /* 26px */
+      padding: clamp(36px, 5vw, 64px) clamp(24px, 4vw, 56px);
+      box-shadow: 0 20px 50px -15px rgba(15, 23, 42, 0.4);
       position: relative;
       overflow: hidden;
     }
 
-    /* Ambient light beam in background */
-    .hero-bento::before {
+    /* Ambient warm/amber glow in corner */
+    .hero-arch-container::before {
       content: '';
       position: absolute;
-      top: -20%;
-      right: 15%;
-      width: 550px;
-      height: 550px;
-      background: radial-gradient(circle, rgba(168, 85, 247, 0.25) 0%, rgba(255, 72, 0, 0.12) 40%, transparent 70%);
-      filter: blur(90px);
+      top: -100px;
+      right: -80px;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(255, 72, 0, 0.22) 0%, rgba(245, 158, 11, 0.08) 50%, transparent 70%);
+      filter: blur(80px);
       pointer-events: none;
       z-index: 1;
     }
 
-    .hero-grid-sense {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
-      align-items: center;
-      max-width: 1240px;
-      margin: 0 auto;
+    .hero-arch-head {
       position: relative;
       z-index: 2;
+      max-width: 900px;
+      margin-bottom: 36px;
     }
 
-    @media (max-width: 960px) {
-      .hero-grid-sense {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-    }
-
-    /* Left column */
-    .hero-left-col {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    .hero-sense-tag {
+    .hero-arch-badge {
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -368,260 +353,229 @@
       backdrop-filter: blur(12px);
       padding: 6px 16px;
       border-radius: var(--radius-pill);
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 700;
       color: #E2E8F0;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
-    .hero-sense-tag .sense-dot {
+    .hero-arch-badge .badge-dot-live {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #A855F7;
-      box-shadow: 0 0 10px #A855F7;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
       animation: pulseDot 2s infinite ease-in-out;
     }
 
-    @keyframes pulseDot {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.3); opacity: 0.7; }
-    }
-
-    .hero-sense-title {
-      font-size: clamp(2.4rem, 4.8vw, 4.2rem);
-      line-height: 1.08;
+    .hero-arch-title {
+      font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+      line-height: 1.14;
       font-weight: 800;
       color: #FFFFFF;
-      letter-spacing: -0.03em;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    .hero-sense-title .hero-gradient-text {
-      background: linear-gradient(135deg, #FF6B00 0%, #FFA843 50%, #C084FC 100%);
+    .hero-accent-text {
+      background: linear-gradient(135deg, #FF5500 0%, #FFA843 60%, #FF8800 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
     }
 
-    .hero-sense-desc {
+    .hero-arch-desc {
       font-size: 1.08rem;
-      line-height: 1.65;
+      line-height: 1.68;
       color: #94A3B8;
-      margin-bottom: 32px;
-      max-width: 560px;
+      margin-bottom: 28px;
+      max-width: 720px;
     }
 
-    /* Sense inline input capsule (identical to reference image) */
-    .hero-sense-form {
-      width: 100%;
-      max-width: 520px;
-      margin-bottom: 20px;
-    }
-
-    .hero-sense-input-box {
-      display: flex;
-      align-items: center;
-      background: #0E131F;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: var(--radius-pill);
-      padding: 6px 8px 6px 18px;
-      gap: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      transition: border-color 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .hero-sense-input-box:focus-within {
-      border-color: #A855F7;
-      box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.25), 0 12px 35px rgba(0,0,0,0.5);
-    }
-
-    .hero-sense-input-box svg {
-      flex-shrink: 0;
-      color: #94A3B8;
-    }
-
-    .hero-sense-input {
-      flex: 1;
-      background: transparent;
-      border: none;
-      outline: none;
-      font-family: inherit;
-      font-size: 0.98rem;
-      font-weight: 500;
-      color: #FFFFFF;
-      min-width: 0;
-    }
-
-    .hero-sense-input::placeholder {
-      color: #64748B;
-    }
-
-    .hero-sense-btn {
-      background: linear-gradient(135deg, var(--accent) 0%, #FF6B00 100%);
-      color: #FFFFFF;
-      border: none;
-      font-family: inherit;
-      font-size: 0.92rem;
-      font-weight: 700;
-      padding: 13px 26px;
-      border-radius: var(--radius-pill);
-      cursor: pointer;
-      white-space: nowrap;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 16px rgba(255, 72, 0, 0.35);
-      flex-shrink: 0;
-    }
-
-    .hero-sense-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 22px rgba(255, 72, 0, 0.5);
-    }
-
-    @media (max-width: 520px) {
-      .hero-sense-input-box {
-        flex-direction: column;
-        align-items: stretch;
-        border-radius: var(--radius-card-sm);
-        padding: 12px;
-      }
-      .hero-sense-btn {
-        width: 100%;
-        text-align: center;
-        margin-top: 8px;
-      }
-    }
-
-    .hero-sense-actions-row {
+    .hero-arch-cta-row {
       display: flex;
       align-items: center;
       gap: 16px;
       flex-wrap: wrap;
     }
 
-    .hero-wa-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #38BDF8;
-      font-size: 0.88rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .hero-wa-link:hover { opacity: 0.8; }
-
-    .hero-phone-alt {
-      color: #94A3B8;
-      font-size: 0.88rem;
-      font-weight: 500;
-      text-decoration: none;
-    }
-    .hero-phone-alt:hover { color: #FFFFFF; }
-
-    /* Right column (3D glossy showcase) */
-    .hero-right-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    /* 2-Card Bento Showcase in Hero */
+    .hero-arch-bento-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
       position: relative;
+      z-index: 2;
     }
 
-    .hero-3d-visual-card {
-      width: 100%;
-      max-width: 440px;
-      aspect-ratio: 1 / 1;
-      border-radius: 36px;
-      position: relative;
-      background: radial-gradient(circle at 30% 20%, rgba(168, 85, 247, 0.3) 0%, rgba(15, 23, 42, 0.85) 70%);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      box-shadow: 
-        0 25px 60px -10px rgba(0, 0, 0, 0.7),
-        0 0 80px -10px rgba(168, 85, 247, 0.3),
-        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+    @media (max-width: 960px) {
+      .hero-arch-bento-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Card 1: Panoramic Interior Window */
+    .hero-bento-media-card {
+      border-radius: 22px;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transform: perspective(1000px) rotateY(-4deg) rotateX(4deg);
-      transition: transform 0.5s ease;
+      position: relative;
+      min-height: 360px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
 
-    .hero-3d-visual-card:hover {
-      transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02);
-    }
-
-    .hero-3d-visual-card img {
+    .hero-bento-media-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      filter: saturate(1.1) contrast(1.05);
+      transition: transform 0.6s ease;
     }
 
-    .hero-3d-badge {
+    .hero-bento-media-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .hero-bento-media-overlay {
       position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      background: rgba(10, 14, 23, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: var(--radius-pill);
-      padding: 10px 18px;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(11, 15, 23, 0.78) 100%);
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+    }
+
+    .hero-media-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .hero-chip-pill {
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #FFFFFF;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+    }
+
+    /* Card 2: Quick Booking Glass Card */
+    .hero-bento-action-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 22px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
       justify-content: space-between;
       color: #FFFFFF;
-      font-size: 0.82rem;
-      font-weight: 700;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
-    .hero-3d-badge-status {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .hero-action-card-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 8px;
     }
 
-    .hero-3d-badge-status .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #10B981;
-      box-shadow: 0 0 8px #10B981;
+    .hero-action-card-desc {
+      font-size: 0.88rem;
+      color: #94A3B8;
+      line-height: 1.55;
+      margin-bottom: 22px;
     }
 
-    /* Right column lower info & rating */
-    .hero-right-info {
-      width: 100%;
-      max-width: 440px;
-      margin-top: 24px;
+    .hero-quick-form-card {
       display: flex;
       flex-direction: column;
       gap: 12px;
+      margin-bottom: 20px;
     }
 
-    .hero-right-info p {
-      font-size: 0.92rem;
-      color: #94A3B8;
-      line-height: 1.55;
-      margin: 0;
-    }
-
-    .hero-sense-rating {
+    .hero-quick-input-group {
       display: flex;
       align-items: center;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-pill);
+      padding: 4px 6px 4px 16px;
       gap: 10px;
-      font-size: 0.88rem;
-      color: #E2E8F0;
+      transition: all 0.2s ease;
     }
 
-    .hero-stars {
-      color: #F59E0B;
-      letter-spacing: 2px;
-      font-size: 1rem;
+    .hero-quick-input-group:focus-within {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(255, 72, 0, 0.25);
+    }
+
+    .hero-quick-input-group svg {
+      color: #94A3B8;
+      flex-shrink: 0;
+    }
+
+    .hero-quick-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      min-width: 0;
+    }
+
+    .hero-quick-input::placeholder {
+      color: #64748B;
+    }
+
+    .hero-quick-submit {
+      background: var(--accent);
+      color: #FFFFFF;
+      border: none;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 11px 20px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(255, 72, 0, 0.3);
+    }
+
+    .hero-quick-submit:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .hero-action-perks-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 18px;
+    }
+
+    .hero-action-perk-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: #CBD5E1;
+      font-weight: 600;
+    }
+
+    .hero-action-perk-item svg {
+      color: var(--accent);
+      flex-shrink: 0;
     }
 
     .hero-metric-item {
@@ -2459,71 +2413,78 @@
     </div>
   </div>
 
-  <!-- ================= 2. ПЕРВЫЙ ЭКРАН (DARK SENSE-STYLE HERO) ================= -->
+  <!-- ================= 2. ПЕРВЫЙ ЭКРАН (ARCHITECTURAL BENTO HERO) ================= -->
   <section class="hero-section">
-    <div class="hero-bento">
-      <div class="hero-grid-sense reveal-on-scroll">
-
-        <!-- Левая колонка Hero -->
-        <div class="hero-left-col">
-          <div class="hero-sense-tag">
-            <span class="sense-dot"></span>
-            <span>г. Урай • Собственное производство с 2011 года</span>
+    <div class="container">
+      <div class="hero-arch-container reveal-on-scroll">
+        <div class="hero-arch-head">
+          <div class="hero-arch-badge">
+            <span class="badge-dot-live"></span>
+            <span>Студия натяжных потолков • г. Урай с 2011 года</span>
           </div>
-
-          <h1 class="hero-sense-title">
-            Натяжные потолки <br>
-            <span class="hero-gradient-text">любой сложности в г. Урай</span>
+          <h1 class="hero-arch-title">
+            Премиальные натяжные потолки <br>
+            <span class="hero-accent-text">& дизайнерский свет в г. Урай</span>
           </h1>
-
-          <p class="hero-sense-desc">
-            Собственная база — изготовление и монтаж от 1 дня. Экологичные полотна без запаха и пыли. Чистый монтаж с перфоратором и пылесосом. Оплата только после окончания работ.
+          <p class="hero-arch-desc">
+            Безупречная геометрия теневых систем EuroKRAAB, скрытые световые линии и премиальные полотна MSD. Чистый монтаж без пыли от 1 дня с гарантией по договору.
           </p>
-
-          <!-- Быстрая форма (капсула как в референсе) -->
-          <form class="hero-sense-form" id="heroQuickForm">
-            <div class="hero-sense-input-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <input type="tel" class="hero-sense-input" id="heroPhoneInput" placeholder="+7 (___) ___-__-__" required>
-              <button type="submit" class="hero-sense-btn">
-                Вызвать мастера
-              </button>
-            </div>
-          </form>
-
-          <div class="hero-sense-actions-row">
-            <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="hero-wa-link">
+          <div class="hero-arch-cta-row">
+            <button type="button" class="btn-pill-primary" data-modal-target="measureModal">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              Бесплатный замер (0 ₽)
+            </button>
+            <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-wa">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-              Написать в WhatsApp
+              Чат в WhatsApp
             </a>
-            <a href="tel:+79088969179" class="hero-phone-alt">
+            <a href="tel:+79088969179" class="btn-pill-glass">
               +7 (908) 896-91-79
             </a>
           </div>
         </div>
 
-        <!-- Правая колонка Hero (3D визуал и рейтинг как в референсе) -->
-        <div class="hero-right-col">
-          <div class="hero-3d-visual-card">
-            <img src="./assets/images/hero-ceilings-composite.jpg" alt="Дизайнерские натяжные потолки NewLine в Урае">
-            <div class="hero-3d-badge">
-              <div class="hero-3d-badge-status">
-                <span class="status-dot"></span>
-                <span>Монтаж с пылесосом</span>
+        <!-- Bento Showcase: Панорама + Быстрая форма -->
+        <div class="hero-arch-bento-grid">
+          <div class="hero-bento-media-card">
+            <img src="./assets/images/hero-ceilings-composite.jpg" alt="Дизайнерские потолки NewLine в Урае">
+            <div class="hero-bento-media-overlay">
+              <div class="hero-media-chips">
+                <span class="hero-chip-pill">EuroKRAAB 2.0</span>
+                <span class="hero-chip-pill">Световые линии SWG</span>
+                <span class="hero-chip-pill">Монтаж без пыли</span>
               </div>
-              <span>0% пыли</span>
             </div>
           </div>
 
-          <div class="hero-right-info">
-            <p>Уделяем внимание каждому углу и профилю. Гарантия по договору до 15 лет. Выезд технолога с каталогом материалов — бесплатно.</p>
-            <div class="hero-sense-rating">
-              <span class="hero-stars">★★★★★</span>
-              <span><strong>4.9 из 5</strong> • Более 1 000 довольных клиентов в Урае</span>
+          <div class="hero-bento-action-card">
+            <div>
+              <h3 class="hero-action-card-title">Запись на замер с образцами</h3>
+              <p class="hero-action-card-desc">Мастер приедет с лазерным дальномером, чемоданом профилей и каталогом полотен. Выезд по г. Урай — 0 ₽.</p>
+              <form class="hero-quick-form-card" id="heroQuickForm">
+                <div class="hero-quick-input-group">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <input type="tel" class="hero-quick-input" id="heroPhoneInput" placeholder="+7 (___) ___-__-__" required>
+                  <button type="submit" class="hero-quick-submit">Записаться</button>
+                </div>
+              </form>
+            </div>
+            <div class="hero-action-perks-list">
+              <div class="hero-action-perk-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Фиксированная цена в договоре</span>
+              </div>
+              <div class="hero-action-perk-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Чистая работа перфоратором с пылесосом</span>
+              </div>
+              <div class="hero-action-perk-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Рассрочка 0% без банков и переплат</span>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
