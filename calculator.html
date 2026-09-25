@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор стоимости натяжного потолка | NEW LINE</title>
+  <meta name="description" content="Интерактивный светотехнический калькулятор сметы натяжных потолков. Теневые EuroKRAAB, треки 48V, световые линии. Мастер Пётр: +7 (908) 896-73-72.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Калькулятор стоимости потолка онлайн | NEW LINE">
+  <meta property="og:description" content="Рассчитайте смету за 30 секунд и получите скидку до 15%!">
+  <meta property="og:image" content="./assets/images/banner.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FF4800'/><path d='M25 75 L25 25 L45 25 L75 75 L75 25' stroke='white' stroke-width='12' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+</head>
+<body>
+
+  <div class="bg-ambient-light" style="top: 0; right: 20%;"></div>
+
+  <!-- Header -->
+  <header class="studio-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="./index.html" class="brand-mark">
+          <div class="brand-titles">
+            <span class="brand-title">New <span>Line</span></span>
+            <span class="brand-subtitle">натяжные потолки</span>
+          </div>
+        </a>
+
+        <nav class="studio-nav">
+          <a href="./index.html" class="studio-nav-link">Главная</a>
+          <a href="./catalog.html" class="studio-nav-link">Решения</a>
+          <a href="./calculator.html" class="studio-nav-link active">Калькулятор</a>
+          <a href="./portfolio.html" class="studio-nav-link">Объекты</a>
+          <a href="./prices.html" class="studio-nav-link">Цены</a>
+          <a href="./contacts.html" class="studio-nav-link">Контакты</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="header-phone">
+            <a href="tel:+79088967372" class="header-phone-link">+7 (908) 896-73-72</a>
+            <span class="header-phone-author">Мастер Пётр</span>
+          </div>
+          <button class="mobile-toggle-btn" aria-label="Меню">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section-space" style="padding-top: 140px; padding-bottom: 30px;">
+    <div class="container">
+      <span class="studio-section-tag">Калькулятор</span>
+      <h1 class="studio-section-title" style="font-size: 3rem; margin-top: 8px;">Расчет стоимости потолка</h1>
+      <p style="color: var(--text-muted); max-width: 620px; font-size: 1.05rem; margin-top: 12px;">
+        Рассчитайте предварительную смету онлайн с учетом полотна, типа профилей и освещения. Отправьте расчет мастеру в WhatsApp в один клик.
+      </p>
+    </div>
+  </section>
+
+  <!-- Estimator Section -->
+  <section class="section-space" style="padding-top: 0;">
+    <div class="container">
+      <div class="estimator-container">
+        <!-- Left: Form Controls -->
+        <div>
+          <!-- Area -->
+          <div class="estimator-group">
+            <div class="estimator-label-row">
+              <span class="estimator-title">Площадь помещения:</span>
+              <span class="estimator-value" id="areaValDisplay">18 м²</span>
+            </div>
+            <input type="range" class="studio-range" id="areaRange" min="5" max="120" value="18" step="1">
+            <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-dim); margin-top: 6px;">
+              <span>5 м²</span>
+              <span>20 м²</span>
+              <span>60 м²</span>
+              <span>120 м²</span>
+            </div>
+          </div>
+
+          <!-- Texture -->
+          <div class="estimator-group">
+            <div class="estimator-label-row">
+              <span class="estimator-title">Фактура полотна:</span>
+            </div>
+            <div class="studio-selector-grid">
+              <div class="studio-option-btn active" data-est-texture="matte">
+                <div class="option-btn-title">Матовый</div>
+                <div class="option-btn-sub">MSD Premium (0 ₽)</div>
+              </div>
+              <div class="studio-option-btn" data-est-texture="satin">
+                <div class="option-btn-title">Сатиновый</div>
+                <div class="option-btn-sub">Bauf шелк</div>
+              </div>
+              <div class="studio-option-btn" data-est-texture="fabric">
+                <div class="option-btn-title">Тканевый</div>
+                <div class="option-btn-sub">Descor ткань</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <div class="estimator-group">
+            <div class="estimator-label-row">
+              <span class="estimator-title">Система профиля:</span>
+            </div>
+            <div class="studio-selector-grid">
+              <div class="studio-option-btn active" data-est-profile="shadow">
+                <div class="option-btn-title">Теневой EuroKRAAB</div>
+                <div class="option-btn-sub">Зазор 6 мм (Хит)</div>
+              </div>
+              <div class="studio-option-btn" data-est-profile="floating">
+                <div class="option-btn-title">Парящий LED</div>
+                <div class="option-btn-sub">Мягкий контур</div>
+              </div>
+              <div class="studio-option-btn" data-est-profile="classic">
+                <div class="option-btn-title">Классический</div>
+                <div class="option-btn-sub">Со вставкой</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Light Elements -->
+          <div class="estimator-group">
+            <div class="estimator-label-row">
+              <span class="estimator-title">Освещение:</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">Светильники (шт):</span>
+                <input type="number" id="estSpots" class="studio-input" value="6" min="0" max="60" style="margin-bottom: 0;">
+              </div>
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">Световые линии (м):</span>
+                <input type="number" id="estLines" class="studio-input" value="0" min="0" max="40" style="margin-bottom: 0;">
+              </div>
+            </div>
+          </div>
+
+          <!-- Niche -->
+          <div class="estimator-group" style="margin-bottom: 0;">
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.9rem; color: #CBD5E1;">
+              <input type="checkbox" id="estNiche" checked style="accent-color: var(--primary); width: 18px; height: 18px;">
+              <span>Скрытая ниша под шторы (ПК-5)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Right: Summary -->
+        <div class="estimator-summary-card">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: 4px;">Смета проекта</div>
+            <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 24px;">Включает полотно, профили, монтаж и 10 лет гарантии</p>
+
+            <div class="summary-spec-row">
+              <span>Площадь:</span>
+              <strong id="specArea">18 м²</strong>
+            </div>
+            <div class="summary-spec-row">
+              <span>Полотно:</span>
+              <strong id="specTexture">Матовый MSD</strong>
+            </div>
+            <div class="summary-spec-row">
+              <span>Система:</span>
+              <strong id="specProfile">Теневой EuroKRAAB 2.0</strong>
+            </div>
+            <div class="summary-spec-row">
+              <span>Скидка за объем:</span>
+              <strong id="specDiscount" style="color: var(--gold);">0 ₽</strong>
+            </div>
+          </div>
+
+          <div>
+            <div class="summary-total-block">
+              <span class="summary-total-label">Итого от:</span>
+              <span class="summary-total-num" id="totalEstimateDisplay">18 970 ₽</span>
+            </div>
+
+            <a id="estimatorWaBtn" href="#" target="_blank" class="btn-studio-primary" style="width: 100%; justify-content: center; margin-bottom: 12px;">
+              Отправить расчет Петру в WhatsApp
+            </a>
+            <button class="btn-studio-ghost" data-modal-target="measureModal" style="width: 100%; justify-content: center;">
+              Зафиксировать цену и заказать замер
+            </button>
+            <p style="font-size: 0.75rem; color: var(--text-dim); text-align: center; margin-top: 12px;">
+              * Точная смета фиксируется в официальном договоре после замера.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio Footer -->
+  <footer class="studio-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="brand-mark" style="margin-bottom: 16px;">
+            <div class="brand-symbol">NL</div>
+            <div class="brand-titles">
+              <span class="brand-title">NEW <span>LINE</span></span>
+              <span class="brand-subtitle">потолки & свет</span>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; line-height: 1.6;">
+            Инженерная студия натяжных потолков. Теневые профили EuroKRAAB, треки 48V, световые линии. Официальная гарантия 10 лет.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Навигация</h4>
+          <div class="footer-list">
+            <a href="./index.html" class="footer-link">Главная</a>
+            <a href="./catalog.html" class="footer-link">Каталог</a>
+            <a href="./calculator.html" class="footer-link">Калькулятор</a>
+            <a href="./portfolio.html" class="footer-link">Объекты</a>
+            <a href="./prices.html" class="footer-link">Цены</a>
+            <a href="./contacts.html" class="footer-link">Контакты</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Контакты</h4>
+          <div class="footer-list">
+            <div>
+              <a href="tel:+79088967372" style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">+7 (908) 896-73-72</a>
+              <div style="font-size: 0.75rem; color: var(--primary);">Мастер Пётр</div>
+            </div>
+            <div>Режим: 08:00 – 22:00 ежедневно</div>
+            <div>Выезд на замер по городу — 0 ₽</div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Сообщество ВКонтакте</h4>
+          <a href="https://vk.ru/club240846958" target="_blank" rel="noopener" class="btn-studio-ghost" style="padding: 10px 18px; font-size: 0.85rem; color: #fff; border-color: rgba(0, 119, 255, 0.4); background: rgba(0, 119, 255, 0.15);">
+            vk.ru/club240846958 →
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>© 2026 NEW LINE (Новая Линия). Все права защищены.</div>
+        <div>Официальное сообщество: <a href="https://vk.ru/club240846958" target="_blank" rel="noopener" style="color: var(--primary);">vk.ru/club240846958</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="measureModal">
+    <div class="modal-box">
+      <button class="modal-close">✕</button>
+      <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 6px;">Вызов мастера на замер</div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;">Мастер Пётр свяжется с вами и приедет с каталогом образцов.</p>
+      
+      <form class="ajax-form">
+        <input type="text" name="name" class="studio-input" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" class="studio-input" placeholder="+7 (908) ___-__-__" required>
+        <button type="submit" class="btn-studio-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
+          Записаться на замер (0 ₽)
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

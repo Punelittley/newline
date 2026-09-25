@@ -1,0 +1,3576 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEW LINE — Натяжные потолки в г. Урай | Работаем с 2011 года</title>
+  <meta name="description" content="Монтаж натяжных потолков и натяжных стен любой сложности в г. Урай. Работаем с 2011 года. Собственная база, монтаж от 1 дня. Оплата после работ, рассрочка 0%. Тел: +7 (908) 896-91-79, +7 (908) 896-73-72.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NEW LINE — Натяжные потолки в г. Урай">
+  <meta property="og:description" content="Монтаж натяжных потолков любой сложности и конфигурации в г. Урай. Работаем с 2011 года. Рассрочка 0%, гарантия 10 лет.">
+  <meta property="og:image" content="./assets/images/banner.png">
+  <meta property="og:url" content="https://vk.ru/club240846958">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23FF4800'/><path d='M25 75 L25 25 L45 25 L75 75 L75 25' stroke='white' stroke-width='12' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+
+  <!-- Google Fonts: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-page: #F8FAFC;
+      --bg-body: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --bg-alt: #F1F5F9;
+      --text-main: #0F172A;
+      --text-dark: #0F172A;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+      --border: #E2E8F0;
+      --border-hover: #CBD5E1;
+      --accent: #FF4800;
+      --accent-hover: #E03E00;
+      --accent-light: #FFF1EB;
+      --green: #10B981;
+      --green-light: #ECFDF5;
+      
+      /* Закругления */
+      --radius-pill: 9999px;
+      --radius-card: 26px;
+      --radius-card-sm: 20px;
+      --radius-img: 22px;
+      
+      /* Тени */
+      --shadow-soft: 0 10px 30px -10px rgba(15, 23, 42, 0.07);
+      --shadow-hover: 0 20px 40px -12px rgba(15, 23, 42, 0.12);
+      --shadow-pill: 0 4px 14px rgba(255, 72, 0, 0.25);
+      --shadow-wa: 0 4px 14px rgba(37, 211, 102, 0.22);
+      
+      --font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 30px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ================= 1. СТАТИЧНЫЙ ЗАКРУГЛЕННЫЙ ХЕДЕР ================= */
+    .header-outer {
+      padding: 20px 0 10px;
+      position: relative; /* СТАТИЧНЫЙ, НЕ ЛИПНЕТ К ЭКРАНУ */
+      z-index: 100;
+    }
+
+    .studio-header {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННЫЙ */
+      box-shadow: var(--shadow-soft);
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-symbol {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.05rem;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННЫЙ */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-pill);
+      letter-spacing: -0.05em;
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-title span { color: var(--accent); }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      display: block;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 2px;
+    }
+
+    /* Навигация-капсула */
+    .studio-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-alt);
+      padding: 5px 8px;
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННЫЙ */
+    }
+
+    .studio-nav-link {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 8px 18px;
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННЫЙ */
+      transition: all 0.2s ease;
+    }
+
+    .studio-nav-link:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .studio-nav-link.active {
+      color: #FFFFFF;
+      background: var(--accent);
+      box-shadow: 0 2px 8px rgba(255, 72, 0, 0.3);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .header-phone-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      padding: 8px 18px;
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННЫЙ */
+      transition: all 0.2s ease;
+    }
+
+    .header-phone-pill:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+
+    .header-phone-text {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+    }
+
+    .header-phone-num {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+
+    .header-phone-sub {
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-pill);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--text-main);
+    }
+
+    /* ================= 2. ЗАКРУГЛЕННЫЕ КНОПКИ ================= */
+    .btn-pill-primary {
+      background: var(--accent);
+      color: #FFFFFF !important;
+      padding: 15px 30px;
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННАЯ */
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      border: none;
+      box-shadow: var(--shadow-pill);
+      transition: all 0.2s ease;
+    }
+
+    .btn-pill-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 72, 0, 0.35);
+    }
+
+    .btn-pill-wa {
+      background: #25D366;
+      color: #FFFFFF !important;
+      padding: 15px 28px;
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННАЯ */
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      border: none;
+      box-shadow: var(--shadow-wa);
+      transition: all 0.2s ease;
+    }
+
+    .btn-pill-wa:hover {
+      background: #20BA5A;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-pill-ghost {
+      background: #FFFFFF;
+      color: var(--text-main) !important;
+      border: 1px solid var(--border);
+      padding: 14px 26px;
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННАЯ */
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-pill-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent) !important;
+      background: var(--accent-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-pill-sm {
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      border-radius: var(--radius-pill);
+    }
+
+    /* ================= 3. ПЕРВЫЙ ЭКРАН (HERO ВО ВСЮ ШИРИНУ ОТ КРАЯ ДО КРАЯ) ================= */
+    .hero-section {
+      padding: 0 0 30px;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero-bento {
+      width: 100%;
+      background: 
+        radial-gradient(ellipse at 50% 15%, rgba(255, 72, 0, 0.22) 0%, transparent 65%),
+        linear-gradient(180deg, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.60) 45%, rgba(15, 23, 42, 0.88) 100%),
+        url('./assets/images/hero-bg.png') center center / cover no-repeat;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      border-left: none;
+      border-right: none;
+      border-radius: 0; /* ОТ ЛЕВОГО ДО ПРАВОГО КРАЯ */
+      padding: clamp(75px, 9vw, 115px) clamp(20px, 4vw, 60px) clamp(55px, 6vw, 75px);
+      box-shadow: 0 24px 60px -15px rgba(15, 23, 42, 0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 580px;
+    }
+
+    /* Фоновое мягкое свечение по центру */
+    .hero-bento::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 350px;
+      background: radial-gradient(ellipse, rgba(255, 72, 0, 0.35), transparent 70%);
+      filter: blur(70px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-text-content {
+      text-align: center;
+      max-width: 980px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 7px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-eyebrow-star {
+      color: #FACC15;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+      line-height: 1.12;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 22px;
+      letter-spacing: -0.028em;
+      text-align: center;
+      text-shadow: 0 4px 28px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-title span, .hero-gradient-text {
+      background: linear-gradient(135deg, #FF771C 0%, #FFAC54 50%, #FF4800 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      filter: drop-shadow(0 2px 14px rgba(255, 72, 0, 0.45));
+    }
+
+    .hero-desc {
+      font-size: 1.16rem;
+      line-height: 1.7;
+      color: #E2E8F0;
+      margin: 0 auto 34px;
+      max-width: 820px;
+      text-align: center;
+      text-shadow: 0 2px 16px rgba(0, 0, 0, 0.75);
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    /* Стеклянная монолитная полоса преимуществ внизу Hero */
+    .hero-metric-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      width: 100%;
+      max-width: 1060px;
+      margin-top: 50px;
+      background: rgba(15, 23, 42, 0.68);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-pill);
+      padding: 16px 36px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-metric-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-metric-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -8px;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-metric-val {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+    }
+
+    .hero-metric-val span {
+      color: var(--accent);
+    }
+
+    .hero-metric-lbl {
+      font-size: 0.8rem;
+      color: #CBD5E1;
+      margin-top: 3px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 880px) {
+      .hero-metric-bar {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: var(--radius-card-sm);
+        padding: 20px;
+        gap: 20px;
+      }
+      .hero-metric-item:nth-child(2)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-metric-bar {
+        grid-template-columns: 1fr;
+      }
+      .hero-metric-item::after {
+        display: none !important;
+      }
+    }
+
+    /* Кнопка стекло для hero */
+    .btn-pill-glass {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #FFFFFF !important;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 15px 28px;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-pill-glass:hover {
+      background: rgba(255, 255, 255, 0.22);
+      border-color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Правая колонка Hero: фотокарточка (обратная совместимость) */
+    .hero-visual-card {
+      position: relative;
+      border-radius: var(--radius-card); /* ЗАКРУГЛЕННЫЙ */
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-hover);
+      background: var(--bg-alt);
+    }
+
+    .hero-visual-card img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .hero-visual-card:hover img {
+      transform: scale(1.02);
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННЫЙ */
+      padding: 8px 18px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-main);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-card-bottom {
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      right: 18px;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-card-sm); /* ЗАКРУГЛЕННЫЙ */
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      color: #FFFFFF;
+    }
+
+    .hero-card-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-pill);
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .author-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .author-sub {
+      font-size: 0.74rem;
+      color: #94A3B8;
+    }
+
+    /* ================= 4. БЕГУЩАЯ СТРОКА (ЗАКРУГЛЕННАЯ) ================= */
+    .marquee-capsule {
+      margin: 10px auto 60px;
+      max-width: 1200px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННАЯ */
+      overflow: hidden;
+      padding: 14px 0;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 30px;
+      width: max-content;
+      animation: marqueeScroll 28s linear infinite;
+    }
+
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+
+    .marquee-dot {
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ================= 5. СЕКЦИИ И КАТАЛОГ (ЗАКРУГЛЕННЫЕ БЛОКИ) ================= */
+    .section-space {
+      padding: 60px 0;
+    }
+
+    .section-head {
+      margin-bottom: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .section-tag-pill {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+    }
+
+    /* Bento Metrics Grid (Reference 1 Style) */
+    .bento-metrics-wrap {
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+
+    .bento-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      .bento-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 580px) {
+      .bento-metrics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .bento-metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .bento-metric-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 36px -10px rgba(15, 23, 42, 0.12);
+      border-color: var(--accent);
+    }
+
+    .bento-metric-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .bento-metric-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-light);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .bento-metric-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--bg-alt);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+    }
+
+    .bento-metric-val {
+      font-size: 2.35rem;
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+
+    .bento-metric-val span {
+      color: var(--accent);
+    }
+
+    .bento-metric-title {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .bento-metric-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.48;
+    }
+
+    /* =============== MOSAIC BENTO CATALOG =============== */
+    .grid-solutions {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 280px;
+      gap: 20px;
+    }
+
+    /* Row 1: card 1 wide (7 cols, 2 rows tall), card 2 narrow (5 cols), card 3 narrow (5 cols) */
+    .card-solution:nth-child(1) { grid-column: span 7; grid-row: span 2; }
+    .card-solution:nth-child(2) { grid-column: span 5; grid-row: span 1; }
+    .card-solution:nth-child(3) { grid-column: span 5; grid-row: span 1; }
+    /* Row 2: card 4,5,6 equal 3 cols each (12 cols total) */
+    .card-solution:nth-child(4) { grid-column: span 4; }
+    .card-solution:nth-child(5) { grid-column: span 4; }
+    .card-solution:nth-child(6) { grid-column: span 4; }
+    /* Row 3: card 7 wide (5), card 8 wide (7) */
+    .card-solution:nth-child(7) { grid-column: span 5; }
+    .card-solution:nth-child(8) { grid-column: span 7; }
+
+    .card-solution {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    /* ---- Featured (first tall card): photo fills top 60%, text at bottom ---- */
+    .card-solution:nth-child(1) {
+      flex-direction: column;
+    }
+    .card-solution:nth-child(1) .card-solution-media {
+      flex: 1;
+      height: auto;
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+    .card-solution:nth-child(1) .card-solution-top {
+      order: -1;
+      padding: 20px 20px 0;
+      margin-bottom: 0;
+    }
+    .card-solution:nth-child(1) .card-solution-body {
+      padding: 16px 20px 20px;
+      background: var(--bg-card);
+    }
+
+    /* ---- Wide cards (7,8): horizontal layout — photo left, text right ---- */
+    .card-solution:nth-child(7),
+    .card-solution:nth-child(8) {
+      flex-direction: row;
+    }
+    .card-solution:nth-child(7) .card-solution-media,
+    .card-solution:nth-child(8) .card-solution-media {
+      width: 42%;
+      min-width: 42%;
+      height: auto;
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+    .card-solution:nth-child(7) .card-solution-top,
+    .card-solution:nth-child(8) .card-solution-top {
+      padding: 20px 20px 0;
+      margin-bottom: 0;
+    }
+    .card-solution:nth-child(7) .card-solution-body,
+    .card-solution:nth-child(8) .card-solution-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-solution:nth-child(7) .card-solution-top,
+    .card-solution:nth-child(8) .card-solution-top {
+      margin-bottom: 12px;
+    }
+
+    /* ---- Standard cards (2,3,4,5,6): top area is photo, bottom is text ---- */
+    .card-solution:not(:nth-child(1)):not(:nth-child(7)):not(:nth-child(8)) {
+      flex-direction: column;
+    }
+    .card-solution:not(:nth-child(1)):not(:nth-child(7)):not(:nth-child(8)) .card-solution-media {
+      height: 140px;
+      border-radius: 0;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+    .card-solution:not(:nth-child(1)):not(:nth-child(7)):not(:nth-child(8)) .card-solution-top {
+      padding: 16px 16px 0;
+      margin-bottom: 6px;
+    }
+    .card-solution:not(:nth-child(1)):not(:nth-child(7)):not(:nth-child(8)) .card-solution-body {
+      padding: 8px 16px 16px;
+    }
+    .card-solution:not(:nth-child(1)):not(:nth-child(7)):not(:nth-child(8)) .card-desc {
+      font-size: 0.82rem;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    /* Hover effect */
+    .card-solution:hover {
+      box-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.14);
+      border-color: var(--accent);
+    }
+    .card-solution:hover .card-solution-media img {
+      transform: scale(1.05);
+    }
+
+    /* Responsive: collapse to 2-col, then 1-col */
+    @media (max-width: 1024px) {
+      .grid-solutions {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+      }
+      .card-solution:nth-child(n) {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        flex-direction: column !important;
+      }
+      .card-solution:nth-child(n) .card-solution-media {
+        width: 100% !important;
+        height: 180px !important;
+        border-radius: 0 !important;
+        margin-bottom: 0 !important;
+      }
+      .card-solution:nth-child(n) .card-solution-top {
+        padding: 16px 16px 0 !important;
+        margin-bottom: 8px !important;
+      }
+      .card-solution:nth-child(n) .card-solution-body {
+        padding: 8px 16px 16px !important;
+      }
+      .card-solution:nth-child(n) .card-desc {
+        font-size: 0.88rem !important;
+        -webkit-line-clamp: unset !important;
+        display: block !important;
+      }
+    }
+    @media (max-width: 600px) {
+      .grid-solutions {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card-solution-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .card-solution-top .card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .card-arrow-action {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-pill);
+      background: var(--accent);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(255, 72, 0, 0.28);
+      border: none;
+      cursor: pointer;
+    }
+
+    .card-solution:hover .card-arrow-action {
+      transform: translate(2px, -2px) scale(1.1);
+      box-shadow: 0 6px 18px rgba(255, 72, 0, 0.45);
+    }
+
+    .card-solution-media {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-solution-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+
+    .card-badge-pill {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      z-index: 2;
+    }
+
+    .card-solution-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.58;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .tag-pill {
+      background: var(--bg-alt);
+      color: #475569;
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+
+    .card-price-value {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .card-price-unit {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ================= 5.1 ПРИМЕРЫ ВЫПОЛНЕННЫХ РАБОТ (ЧИСТАЯ ФОТО-ГАЛЕРЕЯ) ================= */
+    .grid-works-photos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 1200px) {
+      .grid-works-photos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-works-photos {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .photo-work-card {
+      position: relative;
+      border-radius: var(--radius-card); /* ЗАКРУГЛЕННЫЙ 26px */
+      overflow: hidden;
+      height: 340px;
+      background: #0F172A;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.4s ease;
+    }
+
+    .photo-work-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.25);
+      border-color: var(--accent);
+    }
+
+    .photo-work-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .photo-work-card:hover .photo-work-img {
+      transform: scale(1.08);
+    }
+
+    .photo-work-zoom-btn {
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      color: var(--text-main);
+      padding: 9px 18px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .photo-work-card:hover .photo-work-zoom-btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ================= АНИМАЦИИ ПРИ СКРОЛЛЕ ================= */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.93) translateY(20px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-scale.is-visible {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.06s; }
+    .reveal-delay-2 { transition-delay: 0.12s; }
+    .reveal-delay-3 { transition-delay: 0.18s; }
+    .reveal-delay-4 { transition-delay: 0.24s; }
+    .reveal-delay-5 { transition-delay: 0.30s; }
+    .reveal-delay-6 { transition-delay: 0.36s; }
+    .reveal-delay-7 { transition-delay: 0.42s; }
+    .reveal-delay-8 { transition-delay: 0.48s; }
+
+    /* Индикатор прогресса скролла страницы */
+    .scroll-progress-line {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent) 0%, #FF8A00 100%);
+      width: 0%;
+      z-index: 9999;
+      box-shadow: 0 0 12px rgba(255, 72, 0, 0.6);
+      transition: width 0.1s ease-out;
+    }
+
+    .works-more-notice {
+      margin-top: 36px;
+      background: var(--bg-alt);
+      border: 1px dashed var(--border-hover);
+      border-radius: var(--radius-card);
+      padding: 24px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .notice-text {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .notice-icon {
+      font-size: 1.4rem;
+    }
+
+    /* Lightbox modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(10px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 960px;
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lightbox-img {
+      width: 100%;
+      max-height: 72vh;
+      object-fit: contain;
+      background: #0B0F17;
+      display: block;
+    }
+
+    .lightbox-caption {
+      padding: 18px 24px;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .lightbox-caption-text {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 0, 0, 0.65);
+      color: #FFFFFF;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+      z-index: 10;
+    }
+
+    .lightbox-close:hover {
+      background: var(--accent);
+    }
+
+    /* ================= 6. БЛОК МАСТЕРА ПЕТРА (ЗАКРУГЛЕННЫЙ) ================= */
+    .master-bento-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card); /* ЗАКРУГЛЕННЫЙ */
+      padding: 48px;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .master-banner-frame {
+      border-radius: var(--radius-img); /* ЗАКРУГЛЕННЫЙ */
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 24px;
+    }
+
+    .master-banner-frame img {
+      width: 100%;
+      display: block;
+    }
+
+    .master-name {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .master-role-badge {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 4px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 18px;
+    }
+
+    .master-quote {
+      font-size: 1.02rem;
+      line-height: 1.7;
+      color: #334155;
+      margin-bottom: 28px;
+    }
+
+    .master-action-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* Список преимуществ мастера */
+    .adv-cards-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .adv-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--bg-alt);
+      padding: 22px;
+      border-radius: var(--radius-card-sm); /* ЗАКРУГЛЕННЫЙ */
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease;
+    }
+
+    .adv-card:hover {
+      transform: translateX(4px);
+      border-color: var(--border-hover);
+    }
+
+    .adv-icon-bubble {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННЫЙ */
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .adv-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: var(--text-main);
+    }
+
+    .adv-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ================= 7. ЗАКРУГЛЕННЫЙ CTA БАННЕР ================= */
+    .cta-banner-card {
+      background: 
+        linear-gradient(135deg, rgba(15, 23, 42, 0.90) 0%, rgba(30, 41, 59, 0.85) 100%),
+        url('./assets/images/hero-bg.png') center center / cover no-repeat;
+      border-radius: var(--radius-card); /* ЗАКРУГЛЕННЫЙ */
+      padding: 60px 48px;
+      color: #FFFFFF;
+      text-align: center;
+      box-shadow: var(--shadow-hover);
+      margin: 40px auto 60px;
+    }
+
+    .cta-tag-pill {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #FFA770;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 18px;
+    }
+
+    .cta-title {
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .cta-desc {
+      font-size: 1.05rem;
+      color: #94A3B8;
+      max-width: 580px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* ================= 8. ЗАКРУГЛЕННЫЙ ПОДВАЛ ================= */
+    .footer-wrapper {
+      padding: 0 0 30px;
+    }
+
+    .studio-footer {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card); /* ЗАКРУГЛЕННЫЙ */
+      padding: 40px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-brand {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .footer-brand span { color: var(--accent); }
+
+    .footer-copy {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .footer-phone-link {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+      display: block;
+      transition: color 0.2s;
+    }
+
+    .footer-phone-link:hover {
+      color: var(--accent);
+    }
+
+    .footer-schedule {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ================= 9. ЗАКРУГЛЕННОЕ МОДАЛЬНОЕ ОКНО ================= */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-box {
+      background: #FFFFFF;
+      width: 100%;
+      max-width: 460px;
+      border-radius: var(--radius-card); /* ЗАКРУГЛЕННЫЙ */
+      padding: 36px;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-pill);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .modal-close:hover {
+      color: var(--text-main);
+      background: #E2E8F0;
+    }
+
+    .modal-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .modal-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .modal-input {
+      width: 100%;
+      padding: 14px 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННЫЙ INPUT */
+      font-size: 0.95rem;
+      font-family: inherit;
+      margin-bottom: 14px;
+      outline: none;
+      background: var(--bg-alt);
+      transition: all 0.2s;
+    }
+
+    .modal-input:focus {
+      border-color: var(--accent);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 3px rgba(255, 72, 0, 0.15);
+    }
+
+    @media (max-width: 1140px) {
+      .hero-float-card {
+        position: static;
+        transform: none !important;
+        animation: none;
+      }
+      .hero-float-desktop {
+        display: none;
+      }
+      .hero-float-cards-mobile {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 6px;
+        margin-bottom: 22px;
+        width: 100%;
+        z-index: 3;
+      }
+    }
+
+    /* Адаптив для планшетов и мобильных */
+    @media (max-width: 992px) {
+      .hero-bento {
+        padding: 44px 20px 32px;
+        min-height: auto;
+      }
+      .master-bento-card {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding: 36px 24px;
+      }
+      .grid-solutions {
+        grid-template-columns: 1fr 1fr;
+      }
+      .studio-nav { display: none; }
+      .mobile-menu-btn { display: flex; }
+      .hero-visual-card img { height: 320px; }
+      .hero-title { font-size: 2.2rem; }
+    }
+
+    @media (max-width: 640px) {
+      .grid-solutions { grid-template-columns: 1fr; }
+      .hero-bento, .master-bento-card, .cta-banner-card, .studio-footer {
+        padding: 28px 16px;
+        border-radius: var(--radius-card-sm);
+      }
+      .hero-title {
+        font-size: 1.85rem;
+      }
+      .hero-desc {
+        font-size: 0.95rem;
+      }
+      .hero-tag-pill {
+        font-size: 0.76rem;
+        padding: 6px 14px;
+      }
+      .hero-float-card {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .banner-float-pill { display: none; }
+      .hero-buttons, .cta-buttons, .master-action-row {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn-pill-primary, .btn-pill-wa, .btn-pill-ghost, .btn-pill-glass {
+        width: 100%;
+      }
+      .header-phone-pill {
+        padding: 6px 14px;
+      }
+      .header-phone-sub { display: none; }
+    }
+
+    /* ================= СТИЛИ ОТЗЫВОВ НА ГЛАВНОЙ ================= */
+    .grid-reviews-preview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 992px) {
+      .grid-reviews-preview {
+        grid-template-columns: 1fr;
+      }
+    }
+    .review-card-home {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.2s ease;
+    }
+    .review-card-home:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent);
+    }
+    .review-author-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .author-avatar-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-light);
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255, 72, 0, 0.2);
+      flex-shrink: 0;
+    }
+    .author-name {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+    .author-date {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .review-deal-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ECFDF5;
+      color: #10B981;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      margin: 14px 0;
+      width: fit-content;
+    }
+    .review-deal-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10B981;
+    }
+    .review-quote-home {
+      font-size: 0.95rem;
+      color: #334155;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .review-stars-gold {
+      color: #F59E0B;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      margin: 8px 0;
+    }
+
+    /* Подсветка активной ссылки в шапке */
+    .studio-nav-link.active {
+      background: var(--text-main);
+      color: #FFFFFF !important;
+      font-weight: 700;
+    }
+
+    /* ================= 4.2 ГОТОВЫЕ ТАРИФЫ И ПРАЙС-ЛИСТ ================= */
+    .tariffs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 36px;
+      align-items: stretch;
+    }
+    @media (max-width: 960px) {
+      .tariffs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .tariff-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 34px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      transition: all 0.28s ease;
+    }
+    .tariff-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--border-hover);
+    }
+    .tariff-card.popular {
+      border: 2px solid var(--accent);
+      box-shadow: 0 16px 36px rgba(255, 72, 0, 0.14);
+    }
+    .tariff-popular-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #FFFFFF;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 16px;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(255, 72, 0, 0.35);
+    }
+    .tariff-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .tariff-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.45;
+      min-height: 40px;
+    }
+    .tariff-price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+    .tariff-price-num {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .tariff-price-period {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .tariff-features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-grow: 1;
+    }
+    .tariff-features-list li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+    .tariff-features-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    /* Таблица цен — новый стиль: карточки-строки */
+    .prices-table-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 32px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .price-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s ease;
+    }
+
+    .price-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .price-row:first-child {
+      padding-top: 0;
+    }
+
+    .price-row:hover {
+      background: none;
+    }
+
+    .price-row-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .price-row-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .price-row-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.35;
+    }
+
+    .price-row-unit {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .price-row-right {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .price-row-val {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .price-row-val.green {
+      color: #16a34a;
+    }
+
+    /* legacy table – hidden */
+    .studio-table { display: none; }
+
+    /* ================= 4.3 FAQ И БЛОК КОНТАКТОВ ================= */
+    .faq-accordion-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+    }
+    .faq-accordion-item:hover {
+      border-color: var(--border-hover);
+    }
+    .faq-head-btn {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 18px 22px;
+      text-align: left;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      transition: color 0.15s ease;
+    }
+    .faq-head-btn:hover {
+      color: var(--accent);
+    }
+    .faq-toggle-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-light);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .faq-accordion-item.open .faq-toggle-icon {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+    .faq-body-content {
+      padding: 0 22px 20px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      display: none;
+    }
+    .faq-accordion-item.open .faq-body-content {
+      display: block;
+    }
+
+    /* Карточка контактов мастера */
+    .direct-contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 32px;
+      box-shadow: var(--shadow-soft);
+    }
+    .contact-line-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .contact-bubble-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-light);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    /* ======= 152-ФЗ: ЧЕКБОКС СОГЛАСИЯ В ФОРМЕ ======= */
+    .consent-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+    .consent-checkbox {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border-radius: 5px;
+      accent-color: var(--accent);
+      cursor: pointer;
+      margin-top: 1px;
+    }
+    .consent-link {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .consent-link:hover { opacity: 0.75; }
+
+    /* ======= FOOTER LEGAL BAR ======= */
+    .footer-legal-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-legal-text {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .footer-legal-link {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .footer-legal-link:hover { opacity: 0.75; }
+
+    /* ======= МОДАЛЬНОЕ ОКНО ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ ======= */
+    .privacy-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(6px);
+      z-index: 3000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .privacy-modal-overlay.is-open { display: flex; }
+    .privacy-modal-box {
+      background: #FFFFFF;
+      border-radius: var(--radius-card);
+      padding: 40px 36px;
+      max-width: 720px;
+      width: 100%;
+      max-height: 82vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.22);
+    }
+    .privacy-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .privacy-modal-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 20px;
+    }
+    .privacy-modal-body h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 20px 0 8px;
+    }
+    .privacy-modal-body p, .privacy-modal-body li {
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.65;
+    }
+    .privacy-modal-body ul {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+    .privacy-modal-body li { margin-bottom: 4px; }
+
+    /* ======= КУКИ-БАННЕР ======= */
+    .cookie-banner {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0F172A;
+      color: #E2E8F0;
+      border-radius: var(--radius-pill);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      max-width: 680px;
+      width: calc(100% - 48px);
+      z-index: 5000;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.28);
+      font-size: 0.84rem;
+      font-weight: 500;
+      line-height: 1.4;
+      animation: cookieFadeIn 0.4s ease;
+    }
+    .cookie-banner.hidden { display: none; }
+    .cookie-banner-text { flex: 1; min-width: 200px; }
+    .cookie-banner-text a { color: #FF7040; text-decoration: underline; }
+    .cookie-accept-btn {
+      background: var(--accent);
+      color: #FFFFFF;
+      border: none;
+      border-radius: var(--radius-pill);
+      padding: 9px 22px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .cookie-accept-btn:hover { background: var(--accent-hover); }
+    @keyframes cookieFadeIn {
+      from { opacity: 0; transform: translateX(-50%) translateY(16px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Полоса прогресса скролла -->
+  <div class="scroll-progress-line" id="scrollProgressBar"></div>
+
+  <!-- ================= 1. СТАТИЧНЫЙ ЗАКРУГЛЕННЫЙ ХЕДЕР ================= -->
+  <div class="header-outer">
+    <div class="container">
+      <header class="studio-header">
+        
+        <!-- Логотип -->
+        <a href="#" class="brand-mark">
+          <div class="brand-titles">
+            <span class="brand-title">New <span>Line</span></span>
+            <span class="brand-subtitle">натяжные потолки</span>
+          </div>
+        </a>
+
+        <!-- Навигация (капсула) -->
+        <nav class="studio-nav" id="studioNav">
+          <a href="#catalog" class="studio-nav-link">Каталог</a>
+          <a href="#prices" class="studio-nav-link">Цены</a>
+          <a href="#portfolio" class="studio-nav-link">Объекты</a>
+          <a href="#about" class="studio-nav-link">О нас</a>
+          <a href="#reviews" class="studio-nav-link">Отзывы</a>
+          <a href="#contacts" class="studio-nav-link">Контакты</a>
+        </nav>
+
+        <!-- Телефон мастера & кнопка меню -->
+        <div class="header-actions">
+          <a href="tel:+79088967372" class="header-phone-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div class="header-phone-text">
+              <span class="header-phone-num">+7 (908) 896-73-72</span>
+              <span class="header-phone-sub">Мастер Пётр</span>
+            </div>
+          </a>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+
+      </header>
+    </div>
+  </div>
+
+  <!-- ================= 2. ПЕРВЫЙ ЭКРАН (HERO ОТ ЛЕВОГО ДО ПРАВОГО КРАЯ) ================= -->
+  <section class="hero-section">
+    <div class="hero-bento">
+      
+      <!-- Центральный контент Hero -->
+      <div class="hero-text-content reveal-on-scroll">
+        <h1 class="hero-title">
+          Натяжные потолки NewLine <br>
+          <span class="hero-gradient-text">любой сложности в г. Урай</span>
+        </h1>
+
+        <p class="hero-desc">
+          Монтаж натяжных потолков любой конфигурации, дизайнерские световые решения и натяжные стены. Собственная производственная база — изготовление и монтаж от 1 дня. Экологичные полотна без запаха и пыли.
+        </p>
+
+        <!-- Закругленные кнопки по центру -->
+        <div class="hero-buttons">
+          <button type="button" class="btn-pill-primary" data-modal-target="measureModal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Бесплатный выезд на замер (0 ₽)
+          </button>
+          
+          <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-wa">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Чат в WhatsApp
+          </a>
+
+          <a href="tel:+79088969179" class="btn-pill-glass">
+            +7 (908) 896-91-79
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 3. ЗАКРУГЛЕННАЯ БЕГУЩАЯ СТРОКА ================= -->
+  <div class="container">
+    <div class="marquee-capsule reveal-on-scroll">
+      <div class="marquee-track">
+        <div class="marquee-item"><span>Г. УРАЙ • С 2011 ГОДА</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>СОБСТВЕННАЯ БАЗА ОТ 1 ДНЯ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>ОПЛАТА ПО ОКОНЧАНИИ РАБОТ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>РАССРОЧКА БЕЗ ПРОЦЕНТОВ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>МАТЕРИАЛЫ БЕЗ ЗАПАХА И АЛЛЕРГЕНОВ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>МОНТАЖ НАТЯЖНЫХ СТЕН</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>ДВУХУРОВНЕВЫЕ ПОТОЛКИ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>СВЕТОВЫЕ ЛИНИИ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>ТЕНЕВЫЕ EUROKRAAB</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>СЛИВ ВОДЫ С ПОТОЛКА</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>БЕСПЛАТНЫЙ ВЫЕЗД И ЗАМЕР</span><span class="marquee-dot">•</span></div>
+        <!-- Дубликат для бесшовного цикла -->
+        <div class="marquee-item"><span>Г. УРАЙ • С 2011 ГОДА</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>СОБСТВЕННАЯ БАЗА ОТ 1 ДНЯ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>ОПЛАТА ПО ОКОНЧАНИИ РАБОТ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>РАССРОЧКА БЕЗ ПРОЦЕНТОВ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>МАТЕРИАЛЫ БЕЗ ЗАПАХА И АЛЛЕРГЕНОВ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>МОНТАЖ НАТЯЖНЫХ СТЕН</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>ДВУХУРОВНЕВЫЕ ПОТОЛКИ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>СВЕТОВЫЕ ЛИНИИ</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>ТЕНЕВЫЕ EUROKRAAB</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>СЛИВ ВОДЫ С ПОТОЛКА</span><span class="marquee-dot">•</span></div>
+        <div class="marquee-item"><span>БЕСПЛАТНЫЙ ВЫЕЗД И ЗАМЕР</span><span class="marquee-dot">•</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= BENTO МЕТРИКИ (В СТИЛЕ REFERENCE 1) ================= -->
+  <section class="bento-metrics-wrap">
+    <div class="container">
+      <div class="bento-metrics-grid reveal-on-scroll">
+        
+        <!-- Карточка 1: Опыт -->
+        <div class="bento-metric-card">
+          <div class="bento-metric-top">
+            <div class="bento-metric-icon">🏆</div>
+            <span class="bento-metric-pill">Опыт и надежность</span>
+          </div>
+          <div class="bento-metric-val">15+ <span>лет</span></div>
+          <div class="bento-metric-title">Работаем в г. Урай</div>
+          <div class="bento-metric-desc">Собственное производство и склад с 2011 года. Более 1 000 безупречно сданных объектов.</div>
+        </div>
+
+        <!-- Карточка 2: Сроки -->
+        <div class="bento-metric-card">
+          <div class="bento-metric-top">
+            <div class="bento-metric-icon">⚡</div>
+            <span class="bento-metric-pill">Быстрый монтаж</span>
+          </div>
+          <div class="bento-metric-val">от 1 <span>дня</span></div>
+          <div class="bento-metric-title">Монтаж без пыли и грязи</div>
+          <div class="bento-metric-desc">Чистый монтаж перфоратором с пылесосом. Изготовление полотен точно по лазерным размерам.</div>
+        </div>
+
+        <!-- Карточка 3: Экологичность -->
+        <div class="bento-metric-card">
+          <div class="bento-metric-top">
+            <div class="bento-metric-icon">🌿</div>
+            <span class="bento-metric-pill">Безопасность</span>
+          </div>
+          <div class="bento-metric-val">100% <span>эко</span></div>
+          <div class="bento-metric-title">MSD Premium без запаха</div>
+          <div class="bento-metric-desc">Европейские экологические сертификаты. Безопасно для аллергиков и детских комнат.</div>
+        </div>
+
+        <!-- Карточка 4: Рассрочка -->
+        <div class="bento-metric-card">
+          <div class="bento-metric-top">
+            <div class="bento-metric-icon">💳</div>
+            <span class="bento-metric-pill">Честная выгода</span>
+          </div>
+          <div class="bento-metric-val">0 ₽ <span>рассрочка</span></div>
+          <div class="bento-metric-title">Без банков и скрытых доплат</div>
+          <div class="bento-metric-desc">Бесплатный замер по Ураю. Оплата только после окончания работ и проверки качества.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- ================= 4. КАТАЛОГ РЕШЕНИЙ (BENTO-КАРТОЧКИ В СТИЛЕ REFERENCE 3) ================= -->
+  <section class="section-space" id="catalog">
+    <div class="container">
+      <div class="section-head reveal-on-scroll">
+        <div>
+          <span class="section-tag-pill">Наши решения</span>
+          <h2 class="section-title">Мы уделяем внимание каждой детали,<br>чтобы ваш потолок выглядел безупречно</h2>
+        </div>
+        <a href="#prices" class="btn-pill-ghost btn-pill-sm">
+          Смотреть цены и тарифы →
+        </a>
+      </div>
+
+      <div class="grid-solutions">
+        <!-- 1. EuroKraab -->
+        <div class="card-solution reveal-on-scroll reveal-delay-1">
+          <div class="card-solution-top">
+            <h3 class="card-title">EuroKRAAB 2.0</h3>
+            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать EuroKRAAB">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </button>
+          </div>
+          <div class="card-solution-media">
+            <span class="card-badge-pill">Теневой зазор</span>
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Теневой потолок EuroKRAAB" loading="lazy">
+          </div>
+          <div class="card-solution-body">
+            <p class="card-desc">
+              Идеальный теневой зазор 6 мм по периметру стены. Полный отказ от пластиковых маскировочных заглушек и потолочных плинтусов.
+            </p>
+            <div class="card-tags">
+              <span class="tag-pill">Четкие углы 90°</span>
+              <span class="tag-pill">Под покраску и обои</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price">
+                <span class="card-price-value">от 950 ₽</span>
+                <span class="card-price-unit">/ м.п.</span>
+              </div>
+              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Световые линии -->
+        <div class="card-solution reveal-on-scroll reveal-delay-2">
+          <div class="card-solution-top">
+            <h3 class="card-title">Световые линии SWG</h3>
+            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Световые линии">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </button>
+          </div>
+          <div class="card-solution-media">
+            <span class="card-badge-pill">Световой дизайн</span>
+            <img src="./assets/images/work-lines.png" alt="Световые линии SWG" loading="lazy">
+          </div>
+          <div class="card-solution-body">
+            <p class="card-desc">
+              Встроенные в натяжной потолок алюминиевые световые линии шириной 15, 30 или 50 мм. Работают как основной свет или для зонирования.
+            </p>
+            <div class="card-tags">
+              <span class="tag-pill">Равномерный свет</span>
+              <span class="tag-pill">Без видимых точек</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price">
+                <span class="card-price-value">от 2 500 ₽</span>
+                <span class="card-price-unit">/ пог. м</span>
+              </div>
+              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Магнитные треки -->
+        <div class="card-solution reveal-on-scroll reveal-delay-3">
+          <div class="card-solution-top">
+            <h3 class="card-title">Магнитные треки 48V</h3>
+            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Магнитные треки">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </button>
+          </div>
+          <div class="card-solution-media">
+            <span class="card-badge-pill">Архитектурный свет</span>
+            <img src="./assets/images/work-track-corner.png" alt="Магнитные треки 48V" loading="lazy">
+          </div>
+          <div class="card-solution-body">
+            <p class="card-desc">
+              Встроенные в одной плоскости с потолком шинопроводы безопасного напряжения 48V. Светильники легко перемещаются и комбинируются.
+            </p>
+            <div class="card-tags">
+              <span class="tag-pill">Безопасно 48V</span>
+              <span class="tag-pill">Сменные споты</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price">
+                <span class="card-price-value">от 500 ₽</span>
+                <span class="card-price-unit">/ со светом</span>
+              </div>
+              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Парящие потолки -->
+        <div class="card-solution reveal-on-scroll reveal-delay-4">
+          <div class="card-solution-top">
+            <h3 class="card-title">Парящие натяжные потолки</h3>
+            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Парящие потолки">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </button>
+          </div>
+          <div class="card-solution-media">
+            <span class="card-badge-pill">Мягкий контур</span>
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Парящие потолки с подсветкой" loading="lazy">
+          </div>
+          <div class="card-solution-body">
+            <p class="card-desc">
+              Скрытый контурный свет по периметру стен создает визуальное ощущение потолка, парящего в невесомости.
+            </p>
+            <div class="card-tags">
+              <span class="tag-pill">LED подсветка</span>
+              <span class="tag-pill">Теплый / нейтральный</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price">
+                <span class="card-price-value">от 800 ₽</span>
+                <span class="card-price-unit">/ пог. м</span>
+              </div>
+              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Скрытый карниз ПК-5 -->
+        <div class="card-solution reveal-on-scroll reveal-delay-5">
+          <div class="card-solution-top">
+            <h3 class="card-title">Монтаж ниши под карниз</h3>
+            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Нишу под карниз">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </button>
+          </div>
+          <div class="card-solution-media">
+            <span class="card-badge-pill">Ниша под шторы</span>
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Скрытая ниша ПК-5" loading="lazy">
+          </div>
+          <div class="card-solution-body">
+            <p class="card-desc">
+              Алюминиевый карниз, интегрированный в потолок. Шторы ниспадают прямо из потолка, скрывая крючки и бегунки.
+            </p>
+            <div class="card-tags">
+              <span class="tag-pill">2-3 ряда штор</span>
+              <span class="tag-pill">Подсветка ткани</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price">
+                <span class="card-price-value">от 1 000 ₽</span>
+                <span class="card-price-unit">/ пог. м</span>
+              </div>
+              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. MSD Premium -->
+        <div class="card-solution reveal-on-scroll reveal-delay-6">
+          <div class="card-solution-top">
+            <h3 class="card-title">Монтаж натяжных потолков</h3>
+            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Потолки MSD">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </button>
+          </div>
+          <div class="card-solution-media">
+            <span class="card-badge-pill">Классика</span>
+            <img src="./assets/images/work-spots.png" alt="Полотна MSD Premium" loading="lazy">
+          </div>
+          <div class="card-solution-body">
+            <p class="card-desc">
+              Классические матовые, сатиновые и глянцевые полотна европейского стандарта экологичности. Без запаха, безопасны для детских комнат.
+            </p>
+            <div class="card-tags">
+              <span class="tag-pill">Ширина до 5.5 м</span>
+              <span class="tag-pill">100% без запаха</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price">
+                <span class="card-price-value">от 550 ₽</span>
+                <span class="card-price-unit">/ м²</span>
+              </div>
+              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Двухуровневые и фактурные -->
+        <div class="card-solution reveal-on-scroll reveal-delay-7">
+          <div class="card-solution-top">
+            <h3 class="card-title">Фактурные и 2-уровневые</h3>
+            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Двухуровневые">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </button>
+          </div>
+          <div class="card-solution-media">
+            <span class="card-badge-pill">Сложная геометрия</span>
+            <img src="./assets/images/work-two-level-warm.png" alt="Двухуровневые и фактурные потолки" loading="lazy">
+          </div>
+          <div class="card-solution-body">
+            <p class="card-desc">
+              Перепады высоты со встроенным светом, фактурные шелковые полотна и дизайнерская фотопечать высокого разрешения.
+            </p>
+            <div class="card-tags">
+              <span class="tag-pill">Фактурные полотна</span>
+              <span class="tag-pill">Арт-печать</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price">
+                <span class="card-price-value">от 650 ₽</span>
+                <span class="card-price-unit">/ м²</span>
+              </div>
+              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Ремонт и сервис -->
+        <div class="card-solution reveal-on-scroll reveal-delay-8">
+          <div class="card-solution-top">
+            <h3 class="card-title">Ремонт и слив воды</h3>
+            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Вызвать на Ремонт или Слив воды">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </button>
+          </div>
+          <div class="card-solution-media">
+            <span class="card-badge-pill">Сервис NewLine</span>
+            <img src="./assets/images/work-track-detail.png" alt="Ремонт и сервис натяжных потолков" loading="lazy">
+          </div>
+          <div class="card-solution-body">
+            <p class="card-desc">
+              Экстренный слив воды при затоплении, ремонт проколов и порезов, замена полотен от 420 ₽/м², демонтаж и врезка люстр в готовые потолки.
+            </p>
+            <div class="card-tags">
+              <span class="tag-pill">Слив воды 1 000 ₽</span>
+              <span class="tag-pill">Ремонт от 500 ₽</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price">
+                <span class="card-price-value">от 500 ₽</span>
+                <span class="card-price-unit">/ выезд</span>
+              </div>
+              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 4.2 ГОТОВЫЕ ТАРИФЫ И ПРАЙС-ЛИСТ ================= -->
+  <section class="section-space" id="prices" style="background: var(--bg-body);">
+    <div class="container">
+      <div class="section-head reveal-on-scroll">
+        <div>
+          <span class="section-tag-pill">Честные цены • Без скрытых доплат</span>
+          <h2 class="section-title">Готовые пакеты и прайс-лист</h2>
+          <p style="color: var(--text-muted); font-size: 0.98rem; margin-top: 6px; max-width: 650px;">
+            Фиксированная стоимость в договоре. Оплата только после выполнения и приемки всех монтажных работ.
+          </p>
+        </div>
+      </div>
+
+      <!-- Сетка 3 готовых тарифов -->
+      <div class="tariffs-grid reveal-on-scroll">
+        
+        <!-- Тариф 1: Стандарт -->
+        <div class="tariff-card">
+          <h3 class="tariff-name">Базовый стандарт</h3>
+          <p class="tariff-subtitle">Практичное и надежное решение для спальни, детской или кухни</p>
+          <div class="tariff-price-box">
+            <span class="tariff-price-num">от 550 ₽</span>
+            <span class="tariff-price-period">/ м² с монтажом</span>
+          </div>
+          <ul class="tariff-features-list">
+            <li>Бесшовное полотно MSD Premium до 5.5 м</li>
+            <li>Матовая, сатиновая или глянцевая фактура</li>
+            <li>Алюминиевый или ПВХ профиль с декоративной вставкой</li>
+            <li>Монтаж люстры или подготовка под споты</li>
+            <li>Экологично, 100% без запаха и пыли</li>
+            <li>Гарантия на полотно и монтаж</li>
+          </ul>
+          <button type="button" class="btn-pill-ghost" style="width: 100%; justify-content: center;" data-modal-target="measureModal">
+            Выбрать Базовый
+          </button>
+        </div>
+
+        <!-- Тариф 2: Теневой стиль (Хит) -->
+        <div class="tariff-card popular">
+          <div class="tariff-popular-badge">Популярный выбор</div>
+          <h3 class="tariff-name">Теневой стиль EuroKRAAB</h3>
+          <p class="tariff-subtitle">Современный минимализм без плинтусов и заглушек</p>
+          <div class="tariff-price-box">
+            <span class="tariff-price-num">от 950 ₽</span>
+            <span class="tariff-price-period">/ пог. м профиля</span>
+          </div>
+          <ul class="tariff-features-list">
+            <li>Премиальный профиль EuroKRAAB 2.0</li>
+            <li>Идеальный ровный теневой зазор 6 мм</li>
+            <li>Четкие углы 90° лазерной стыковки</li>
+            <li>Полотна повышенной плотности MSD Evolution</li>
+            <li>Возможность переклейки обоев без снятия потолка</li>
+            <li>Чистый монтаж с пылесосом</li>
+          </ul>
+          <button type="button" class="btn-pill-primary" style="width: 100%; justify-content: center;" data-modal-target="measureModal">
+            Выбрать EuroKRAAB
+          </button>
+        </div>
+
+        <!-- Тариф 3: Световой дизайн -->
+        <div class="tariff-card">
+          <h3 class="tariff-name">Дизайнерский свет</h3>
+          <p class="tariff-subtitle">Световые линии SWG, треки 48V и парящие эффекты</p>
+          <div class="tariff-price-box">
+            <span class="tariff-price-num">от 2 500 ₽</span>
+            <span class="tariff-price-period">/ пог. м со светом</span>
+          </div>
+          <ul class="tariff-features-list">
+            <li>Световые линии 15, 30 или 50 мм</li>
+            <li>Магнитные трековые системы 48V</li>
+            <li>Парящие профили с контурной LED-подсветкой</li>
+            <li>Скрытые ниши под шторные карнизы ПК-5</li>
+            <li>Установка надежных блоков питания и диммеров</li>
+            <li>Индивидуальный световой расчет комнаты</li>
+          </ul>
+          <button type="button" class="btn-pill-ghost" style="width: 100%; justify-content: center;" data-modal-target="measureModal">
+            Выбрать Световой
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Детальный прайс-лист — карточки-строки -->
+      <div class="prices-table-card reveal-on-scroll">
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 24px; color: var(--text-main);">
+          Подробный прайс-лист на полотна и работы
+        </h3>
+        <div class="price-list">
+
+          <div class="price-row">
+            <div class="price-row-left">
+              <div class="price-row-icon">🎭</div>
+              <div>
+                <div class="price-row-name">Полотно MSD Premium (матовый, сатин, глянец)</div>
+                <div class="price-row-unit">за м²</div>
+              </div>
+            </div>
+            <div class="price-row-right">
+              <span class="price-row-val">от 550 ₽</span>
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-row-left">
+              <div class="price-row-icon">✨</div>
+              <div>
+                <div class="price-row-name">Полотно фактурное (шелк, парча, галактика)</div>
+                <div class="price-row-unit">за м²</div>
+              </div>
+            </div>
+            <div class="price-row-right">
+              <span class="price-row-val">от 650 ₽</span>
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-row-left">
+              <div class="price-row-icon">🌬️</div>
+              <div>
+                <div class="price-row-name">Тканевое дышащее полотно Descor / Clipso</div>
+                <div class="price-row-unit">за м²</div>
+              </div>
+            </div>
+            <div class="price-row-right">
+              <span class="price-row-val">от 1 800 ₽</span>
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-row-left">
+              <div class="price-row-icon">🔲</div>
+              <div>
+                <div class="price-row-name">Профиль теневой EuroKRAAB 2.0 (алюминий)</div>
+                <div class="price-row-unit">за пог. м</div>
+              </div>
+            </div>
+            <div class="price-row-right">
+              <span class="price-row-val">от 950 ₽</span>
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-row-left">
+              <div class="price-row-icon">💡</div>
+              <div>
+                <div class="price-row-name">Световые линии SWG (врезка, лента, рассеиватель)</div>
+                <div class="price-row-unit">за пог. м</div>
+              </div>
+            </div>
+            <div class="price-row-right">
+              <span class="price-row-val">от 2 500 ₽</span>
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-row-left">
+              <div class="price-row-icon">🪟</div>
+              <div>
+                <div class="price-row-name">Скрытый карниз ПК-5 для штор</div>
+                <div class="price-row-unit">за пог. м</div>
+              </div>
+            </div>
+            <div class="price-row-right">
+              <span class="price-row-val">от 1 000 ₽</span>
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-row-left">
+              <div class="price-row-icon">🔦</div>
+              <div>
+                <div class="price-row-name">Монтаж закладной под точечный светильник / люстру</div>
+                <div class="price-row-unit">за шт.</div>
+              </div>
+            </div>
+            <div class="price-row-right">
+              <span class="price-row-val">от 350 ₽</span>
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-row-left">
+              <div class="price-row-icon">💧</div>
+              <div>
+                <div class="price-row-name">Аварийный слив воды при затоплении</div>
+                <div class="price-row-unit">за выезд</div>
+              </div>
+            </div>
+            <div class="price-row-right">
+              <span class="price-row-val">от 1 000 ₽</span>
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-row-left">
+              <div class="price-row-icon">🔧</div>
+              <div>
+                <div class="price-row-name">Ремонт пореза, устранение прокола</div>
+                <div class="price-row-unit">за работу</div>
+              </div>
+            </div>
+            <div class="price-row-right">
+              <span class="price-row-val">от 500 ₽</span>
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-row-left">
+              <div class="price-row-icon">📐</div>
+              <div>
+                <div class="price-row-name">Выезд мастера на замер с образцами по г. Урай</div>
+                <div class="price-row-unit">услуга</div>
+              </div>
+            </div>
+            <div class="price-row-right">
+              <span class="price-row-val green">0 ₽ — Бесплатно</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 5. ПРИМЕРЫ ВЫПОЛНЕННЫХ РАБОТ (РЕАЛЬНЫЕ ОБЪЕКТЫ) ================= -->
+  <section class="section-space" id="portfolio">
+    <div class="container">
+      <div class="section-head reveal-on-scroll">
+        <div>
+          <span class="section-tag-pill">Живые фото с объектов • г. Урай</span>
+          <h2 class="section-title">Примеры выполненных работ</h2>
+          <p style="color: var(--text-muted); font-size: 0.98rem; margin-top: 6px; max-width: 650px;">
+            Реальные фотографии сданных объектов студии NewLine в г. Урай. Никаких чужих картинок из интернета — только наши живые работы с 2011 года.
+          </p>
+        </div>
+        <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">
+          Консультация по фото →
+        </button>
+      </div>
+
+      <div class="grid-works-photos">
+        
+        <!-- Фото 1 -->
+        <div class="photo-work-card reveal-scale reveal-delay-1" onclick="openLightbox('./assets/images/work-two-level-warm.png', 'Двухуровневый натяжной потолок со скрытой теплой LED-подсветкой')">
+          <img src="./assets/images/work-two-level-warm.png" alt="Двухуровневый потолок" class="photo-work-img" loading="lazy">
+          <div class="photo-work-zoom-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>Увеличить</span>
+          </div>
+        </div>
+
+        <!-- Фото 2 -->
+        <div class="photo-work-card reveal-scale reveal-delay-2" onclick="openLightbox('./assets/images/work-zigzag-corridor.png', 'Зигзагообразная геометрическая световая линия SWG в прихожей')">
+          <img src="./assets/images/work-zigzag-corridor.png" alt="Световая линия в коридоре" class="photo-work-img" loading="lazy">
+          <div class="photo-work-zoom-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>Увеличить</span>
+          </div>
+        </div>
+
+        <!-- Фото 3 -->
+        <div class="photo-work-card reveal-scale reveal-delay-3" onclick="openLightbox('./assets/images/work-lines-cylinders.png', 'Световые линии и накладные черные цилиндрические споты')">
+          <img src="./assets/images/work-lines-cylinders.png" alt="Световые линии и споты" class="photo-work-img" loading="lazy">
+          <div class="photo-work-zoom-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>Увеличить</span>
+          </div>
+        </div>
+
+        <!-- Фото 4 -->
+        <div class="photo-work-card reveal-scale reveal-delay-4" onclick="openLightbox('./assets/images/work-track-corner.png', 'Черный магнитный шинопровод 48V и встроенная угловая световая линия')">
+          <img src="./assets/images/work-track-corner.png" alt="Магнитный трек 48V" class="photo-work-img" loading="lazy">
+          <div class="photo-work-zoom-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>Увеличить</span>
+          </div>
+        </div>
+
+        <!-- Фото 5 -->
+        <div class="photo-work-card reveal-scale reveal-delay-5" onclick="openLightbox('./assets/images/work-lines.png', 'Геометрические световые линии SWG в натяжном потолке')">
+          <img src="./assets/images/work-lines.png" alt="Световые линии SWG" class="photo-work-img" loading="lazy">
+          <div class="photo-work-zoom-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>Увеличить</span>
+          </div>
+        </div>
+
+        <!-- Фото 6 -->
+        <div class="photo-work-card reveal-scale reveal-delay-6" onclick="openLightbox('./assets/images/work-garage-wide.png', 'Монтаж натяжного потолка в гараже с обходом автоматических ворот')">
+          <img src="./assets/images/work-garage-wide.png" alt="Потолок в гараже" class="photo-work-img" loading="lazy">
+          <div class="photo-work-zoom-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>Увеличить</span>
+          </div>
+        </div>
+
+        <!-- Фото 7 -->
+        <div class="photo-work-card reveal-scale reveal-delay-7" onclick="openLightbox('./assets/images/work-spots.png', 'Встроенные точечные споты по лазерному уровню в матовом потолке')">
+          <img src="./assets/images/work-spots.png" alt="Точечные споты" class="photo-work-img" loading="lazy">
+          <div class="photo-work-zoom-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>Увеличить</span>
+          </div>
+        </div>
+
+        <!-- Фото 8 -->
+        <div class="photo-work-card reveal-scale reveal-delay-8" onclick="openLightbox('./assets/images/work-track-detail.png', 'Прецизионный узел примыкания полотна к направляющим')">
+          <img src="./assets/images/work-track-detail.png" alt="Прецизионный узел" class="photo-work-img" loading="lazy">
+          <div class="photo-work-zoom-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>Увеличить</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Плашка о пополнении портфолио -->
+      <div class="works-more-notice">
+        <div class="notice-text">
+          <span class="notice-icon">📸</span>
+          <div>
+            <strong>Работаем в г. Урай с 2011 года • 1000+ сданных объектов!</strong>
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">
+              На бесплатном замере мастер покажет расширенный каталог работ, чемодан образцов профилей, светильников и полотен.
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn-pill-primary btn-pill-sm" data-modal-target="measureModal">
+          Вызвать мастера на замер (0 ₽)
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+<!-- ================= 6. БЛОК МАСТЕРА ПЕТРА (ЗАКРУГЛЕННЫЙ BENTO-БЛОК) ================= -->
+  <section class="section-space" id="about">
+    <div class="container">
+      <div class="master-bento-card reveal-on-scroll">
+        
+        <!-- Левая колонка: Визитка мастера -->
+        <div class="master-presentation">
+          <div class="master-banner-frame">
+            <img src="./assets/images/banner.png" alt="NEW LINE Натяжные потолки г. Урай">
+          </div>
+
+          <span class="master-role-badge">NewLine • г. Урай • с 2011 года</span>
+          <h2 class="master-name">Натяжные потолки NewLine</h2>
+          
+          <p class="master-quote">
+            «Работаем в г. Урай с 2011 года. У нас собственная производственная база, поэтому изготавливаем и монтируем потолки в кратчайшие сроки от 1 дня. Оплата только по окончании всех работ, предоставляем беспроцентную рассрочку. Честная гарантия на работы и материалы».
+          </p>
+
+          <div class="master-action-row">
+            <a href="tel:+79088969179" class="btn-pill-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +7 (908) 896-91-79
+            </a>
+            
+            <a href="https://vk.ru/club240846958" target="_blank" rel="noopener" class="btn-pill-ghost">
+              Группа ВКонтакте
+            </a>
+          </div>
+        </div>
+
+        <!-- Правая колонка: Карточки преимуществ -->
+        <div class="adv-cards-list">
+          <div class="adv-card">
+            <div class="adv-icon-bubble">🏭</div>
+            <div>
+              <h4 class="adv-title">Собственная база — монтаж от 1 дня</h4>
+              <p class="adv-desc">Собственное производство в г. Урай позволяет изготавливать полотна точно в размер и выполнять монтаж в удобное для вас время.</p>
+            </div>
+          </div>
+
+          <div class="adv-card">
+            <div class="adv-icon-bubble">💳</div>
+            <div>
+              <h4 class="adv-title">Оплата по окончании и рассрочка 0%</h4>
+              <p class="adv-desc">Никаких рисков — расчет только после завершения работ. Наличная и безналичная форма оплаты, беспроцентная рассрочка.</p>
+            </div>
+          </div>
+
+          <div class="adv-card">
+            <div class="adv-icon-bubble">🌿</div>
+            <div>
+              <h4 class="adv-title">Без запаха и аллергенов</h4>
+              <p class="adv-desc">Качественные сертифицированные полотна (матовые, сатиновые, лаковые, фактурные, ткань). Чистый монтаж перфоратором с пылесосом.</p>
+            </div>
+          </div>
+
+          <div class="adv-card">
+            <div class="adv-icon-bubble">💧</div>
+            <div>
+              <h4 class="adv-title">Слив воды и сервис потолков</h4>
+              <p class="adv-desc">Аварийный слив воды при затоплении, демонтаж полотен, монтаж люстр, светильников и гардин в ранее установленный потолок.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5.3 ОТЗЫВЫ КЛИЕНТОВ ================= -->
+  <section class="section-block" id="reviews" style="padding-top: 10px;">
+    <div class="container">
+      <div class="section-head reveal-on-scroll">
+        <span class="section-tag-pill">Рейтинг 5.0 ★★★★★ • г. Урай</span>
+        <h2 class="section-title">Отзывы наших заказчиков</h2>
+        <p class="section-desc">
+          Честные отзывы жителей Урая с Авито и ВКонтакте. Монтируем натяжные потолки с 2011 года с неизменным качеством.
+        </p>
+      </div>
+
+      <div class="grid-reviews-preview">
+        <!-- Отзыв 1 -->
+        <div class="review-card-home reveal-scale reveal-delay-1">
+          <div class="review-author-info">
+            <div class="author-avatar-circle">НГ</div>
+            <div>
+              <div class="author-name">Николай Глухов</div>
+              <div class="author-date">21 августа • Авито</div>
+            </div>
+          </div>
+          <div class="review-deal-pill">
+            <span class="review-deal-dot"></span>
+            Сделка состоялась
+          </div>
+          <div class="review-stars-gold">★★★★★</div>
+          <p class="review-quote-home" style="margin-top: 10px;">
+            «Очень ответственные ребята, все сделали быстро и качественно. Рекомендую как надежного и честного исполнителя. Спасибо за работу!»
+          </p>
+        </div>
+
+        <!-- Отзыв 2 -->
+        <div class="review-card-home reveal-scale reveal-delay-2">
+          <div class="review-author-info">
+            <div class="author-avatar-circle">ЯМ</div>
+            <div>
+              <div class="author-name">Яна Митренева</div>
+              <div class="author-date">5 августа • Авито</div>
+            </div>
+          </div>
+          <div class="review-deal-pill">
+            <span class="review-deal-dot"></span>
+            Сделка состоялась
+          </div>
+          <div class="review-stars-gold">★★★★★</div>
+          <p class="review-quote-home" style="margin-top: 10px;">
+            «быстро. качественно. оплата соответствует сделанной работе.»
+          </p>
+        </div>
+
+        <!-- Отзыв 3 -->
+        <div class="review-card-home reveal-scale reveal-delay-3">
+          <div class="review-author-info">
+            <div class="author-avatar-circle">ДМ</div>
+            <div>
+              <div class="author-name">Дмитрий</div>
+              <div class="author-date">30 июля • Авито</div>
+            </div>
+          </div>
+          <div class="review-deal-pill">
+            <span class="review-deal-dot"></span>
+            Сделка состоялась
+          </div>
+          <div class="review-stars-gold">★★★★★</div>
+          <p class="review-quote-home" style="margin-top: 10px;">
+            «Потолок сделали как хотели, спасибо. Всё аккуратно и в срок.»
+          </p>
+        </div>
+      </div>
+
+      <!-- Кнопка вызова замера -->
+      <div style="text-align: center; margin-bottom: 20px;" class="reveal-on-scroll">
+        <button type="button" class="btn-pill-primary" data-modal-target="measureModal">
+          Оставить заявку на бесплатный замер →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5.4 ВОПРОСЫ И ОТВЕТЫ (FAQ) И КОНТАКТЫ ================= -->
+  <section class="section-space" id="contacts">
+    <div class="container">
+      <div class="section-head reveal-on-scroll">
+        <div>
+          <span class="section-tag-pill">FAQ & Связь с мастером</span>
+          <h2 class="section-title">Часто задаваемые вопросы и контакты</h2>
+          <p style="color: var(--text-muted); font-size: 0.98rem; margin-top: 6px; max-width: 650px;">
+            Отвечаем на главные вопросы перед установкой. Если у вас нестандартная задача — звоните напрямую мастеру Петру.
+          </p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;" class="reveal-on-scroll">
+        
+        <!-- Левая колонка: Аккордеон FAQ -->
+        <div>
+          <div class="faq-accordion-item open">
+            <button type="button" class="faq-head-btn">
+              <span>Сколько времени занимает установка потолка?</span>
+              <span class="faq-toggle-icon">✕</span>
+            </button>
+            <div class="faq-body-content">
+              Стандартная комната площадью 15–20 м² с установкой люстры монтируется за 2,5–4 часа. Если в комнате сложные световые линии или много углов, монтаж может занять 5–6 часов. Собственная база позволяет приступить к работе уже на следующий день после замера.
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-head-btn">
+              <span>Будет ли пыль и запах после монтажа?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-body-content">
+              Мы используем экологичные полотна европейского стандарта качества MSD Premium и Evolution, которые не выделяют запаха и безопасны даже для детских комнат. Сверление стен производим перфоратором с системой пылеудаления, поэтому пыли минимум.
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-head-btn">
+              <span>Что делать сначала: клеить обои или натягивать потолок?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-body-content">
+              Оптимально сначала подготовить стены и смонтировать профиль потолка, либо натянуть потолок при уже поклеенных обоях с использованием защитной пленки. С теневым профилем EuroKRAAB обои можно переклеивать в любое время без снятия полотна.
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-head-btn">
+              <span>Как спасает натяжной потолок при затоплении соседями?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-body-content">
+              Полотно выдерживает до 100 литров воды на 1 м²! В случае протечки вода собирается в пузырь, защищая ваш ремонт, мебель и технику. Мы оперативно выезжаем, аккуратно сливаем воду через отверстие светильника и восстанавливаем полотно тепловой пушкой.
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-head-btn">
+              <span>Есть ли беспроцентная рассрочка?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-body-content">
+              Да, мы предоставляем клиентам честную беспроцентную рассрочку без банков и переплат. Оплата производится частями, а первый взнос вносится только после завершения и сдачи работ.
+            </div>
+          </div>
+        </div>
+
+        <!-- Правая колонка: Прямой контакт и быстрая запись -->
+        <div class="direct-contact-card">
+          <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 20px; color: var(--text-main);">
+            Свяжитесь с нами напрямую
+          </h3>
+
+          <div class="contact-line-item">
+            <div class="contact-bubble-icon">📞</div>
+            <div>
+              <div style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Основной телефон мастера</div>
+              <a href="tel:+79088969179" style="font-size: 1.2rem; font-weight: 800; color: var(--accent); text-decoration: none;">+7 (908) 896-91-79</a>
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">Дополнительный: +7 (908) 896-73-72</div>
+            </div>
+          </div>
+
+          <div class="contact-line-item">
+            <div class="contact-bubble-icon">💬</div>
+            <div>
+              <div style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Мессенджеры и соцсети</div>
+              <div style="display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap;">
+                <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-wa btn-pill-sm">WhatsApp</a>
+                <a href="https://vk.ru/club240846958" target="_blank" rel="noopener" class="btn-pill-ghost btn-pill-sm">ВКонтакте</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-line-item">
+            <div class="contact-bubble-icon">📍</div>
+            <div>
+              <div style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Город и график работы</div>
+              <div style="font-size: 0.98rem; font-weight: 700; color: var(--text-main); margin-top: 2px;">г. Урай, Ханты-Мансийский АО</div>
+              <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 2px;">Ежедневно с 08:00 до 21:00 • Без выходных</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border);">
+            <button type="button" class="btn-pill-primary" style="width: 100%; justify-content: center;" data-modal-target="measureModal">
+              Записаться на бесплатный замер (0 ₽)
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6. ЗАКРУГЛЕННЫЙ CTA БАННЕР ================= -->
+  <div class="container">
+    <div class="cta-banner-card reveal-scale">
+      <span class="cta-tag-pill">г. Урай • Бесплатный выезд</span>
+      <h2 class="cta-title">Бесплатный выезд для расчета сметы и договора</h2>
+      <p class="cta-desc">
+        Приедем в удобное для вас время с каталогом полотен, светильников и профилей. Рассчитаем точную стоимость и оформим договор с гарантией на объекте.
+      </p>
+      
+      <div class="cta-buttons">
+        <button type="button" class="btn-pill-primary" data-modal-target="measureModal">
+          Вызвать мастера на замер (0 ₽)
+        </button>
+        <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-wa">
+          Написать в WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 7. ПОДВАЛ ================= -->
+  <div class="footer-wrapper">
+    <div class="container">
+      <footer class="studio-footer">
+        <div class="footer-inner">
+          <div>
+            <div class="footer-brand">NEW <span>LINE</span></div>
+            <div class="footer-copy">Натяжные потолки и стены в г. Урай. Работаем с 2011 года.</div>
+          </div>
+
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="#catalog" class="btn-pill-ghost btn-pill-sm">Каталог</a>
+            <a href="#prices" class="btn-pill-ghost btn-pill-sm">Цены</a>
+            <a href="#portfolio" class="btn-pill-ghost btn-pill-sm">Объекты</a>
+            <a href="#about" class="btn-pill-ghost btn-pill-sm">О нас</a>
+            <a href="#reviews" class="btn-pill-ghost btn-pill-sm">Отзывы</a>
+            <a href="#contacts" class="btn-pill-ghost btn-pill-sm">Контакты</a>
+          </div>
+
+          <div style="text-align: right;">
+            <a href="tel:+79088969179" class="footer-phone-link">+7 (908) 896-91-79</a>
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">+7 (908) 896-73-72</div>
+            <div class="footer-schedule">г. Урай • Ежедневно с 08:00 до 21:00 • Без выходных</div>
+          </div>
+        </div>
+
+        <!-- Нижняя строка: реквизиты и политика конфиденциальности -->
+        <div class="footer-legal-bar">
+          <div class="footer-legal-text">
+            ИП Макаров Николай — г. Урай, ХМАО–Югра •
+            <a href="#" onclick="openPrivacyModal(event)" class="footer-legal-link">Политика конфиденциальности</a> •
+            <span>Персональные данные обрабатываются в соответствии с&nbsp;152-ФЗ</span>
+          </div>
+          <div class="footer-legal-text">© 2011–<span id="footerYear">2025</span> NewLine. Все права защищены.</div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+
+  <!-- ================= 8. МОДАЛЬНОЕ ОКНО ЗАПИСИ НА ЗАМЕР ================= -->
+  <div class="modal-overlay" id="measureModal">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Закрыть">✕</button>
+      <h3 class="modal-title">Бесплатный замер</h3>
+      <p class="modal-desc">Мастер перезвонит вам в течение 15 минут для согласования удобного времени.</p>
+      
+      <form id="measureForm">
+        <input type="text" class="modal-input" placeholder="Ваше имя" required>
+        <input type="tel" class="modal-input" placeholder="+7 (___) ___-__-__" required>
+
+        <!-- 152-ФЗ: чекбокс согласия на обработку персональных данных -->
+        <label class="consent-label">
+          <input type="checkbox" class="consent-checkbox" required>
+          <span>Нажимая кнопку, я соглашаюсь с&nbsp;<a href="#" onclick="openPrivacyModal(event)" class="consent-link">Политикой конфиденциальности</a>&nbsp;и даю согласие на обработку персональных данных в соответствии с&nbsp;Федеральным законом №&nbsp;152-ФЗ.</span>
+        </label>
+
+        <button type="submit" class="btn-pill-primary" style="width: 100%;">
+          Записаться на замер
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= 9. ЗАКРУГЛЕННЫЙ ЛАЙТБОКС (ПРОСМОТР ФОТО РАБОТ) ================= -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Закрыть">✕</button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption">
+        <div class="lightbox-caption-text" id="lightboxCaption"></div>
+        <button type="button" class="btn-pill-primary btn-pill-sm" data-modal-target="measureModal">
+          Хочу такой же потолок
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 10. МОДАЛЬНОЕ ОКНО: ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ (152-ФЗ) ================= -->
+  <div class="privacy-modal-overlay" id="privacyModal">
+    <div class="privacy-modal-box">
+      <button class="privacy-modal-close" onclick="closePrivacyModal()" aria-label="Закрыть">✕</button>
+      <h3 class="privacy-modal-title">Политика конфиденциальности и обработки персональных данных</h3>
+      <div class="privacy-modal-body">
+        <p>Настоящая Политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки и меры по обеспечению безопасности персональных данных, предпринимаемые <strong>ИП Макаров Николай</strong> (далее — Оператор), г. Урай, Ханты-Мансийский автономный округ – Югра.</p>
+
+        <h4>1. Основные понятия</h4>
+        <p><strong>Персональные данные</strong> — любая информация, относящаяся прямо или косвенно к определенному Пользователю веб-сайта. Настоящий сайт собирает исключительно минимально необходимые данные для обратной связи: имя и номер контактного телефона.</p>
+
+        <h4>2. Цели обработки персональных данных</h4>
+        <ul>
+          <li>Предоставление консультации по натяжным потолкам, расчету стоимости и материалам;</li>
+          <li>Согласование даты и времени бесплатного выезда мастера на замер по г. Урай;</li>
+          <li>Заключение и исполнение договора на монтаж натяжных потолков.</li>
+        </ul>
+
+        <h4>3. Правовые основания и безопасность</h4>
+        <p>Обработка персональных данных осуществляется на основе согласия Пользователя, выражаемого путем отправки формы на сайте. Оператор гарантирует конфиденциальность и обязуется не передавать данные третьим лицам, за исключением случаев, предусмотренных законодательством РФ. Данные обрабатываются на территории Российской Федерации в соответствии с Федеральным законом № 242-ФЗ.</p>
+
+        <h4>4. Сроки обработки и отзыв согласия</h4>
+        <p>Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив соответствующее обращение по телефону: <strong>+7 (908) 896-91-79</strong> или через WhatsApp.</p>
+
+        <h4>5. Не является публичной офертой</h4>
+        <p>Вся информация, представленная на сайте (включая цены, комплектации и фотографии), носит исключительно ознакомительный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ. Окончательная фиксированная стоимость работ определяется договором после проведения замера.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 11. КУКИ-БАННЕР (COOKIE CONSENT) ================= -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner-text">
+      Мы используем файлы cookie для корректной работы сайта в соответствии с 152-ФЗ. Продолжая использовать сайт, вы соглашаетесь с <a href="#" onclick="openPrivacyModal(event)">Политикой конфиденциальности</a>.
+    </div>
+    <button type="button" class="cookie-accept-btn" onclick="acceptCookies()">Принять</button>
+  </div>
+
+  <!-- СКРИПТ: МОДАЛКА, ЛАЙТБОКС И МЕНЮ -->
+  <script>
+    // Лайтбокс для просмотра реальных фото
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    window.openLightbox = function(src, caption) {
+      if (lightboxModal && lightboxImg && lightboxCaption) {
+        lightboxImg.src = src;
+        lightboxCaption.textContent = caption || '';
+        lightboxModal.style.display = 'flex';
+      }
+    };
+
+    if (lightboxClose && lightboxModal) {
+      lightboxClose.addEventListener('click', () => {
+        lightboxModal.style.display = 'none';
+      });
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) {
+          lightboxModal.style.display = 'none';
+        }
+      });
+    }
+
+    // Модальное окно замера
+    const modal = document.getElementById('measureModal');
+    const modalButtons = document.querySelectorAll('[data-modal-target="measureModal"]');
+    const modalClose = document.querySelector('.modal-close');
+    const measureForm = document.getElementById('measureForm');
+
+    modalButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (modal) modal.style.display = 'flex';
+      });
+    });
+
+    if (modalClose && modal) {
+      modalClose.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+    }
+
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+    }
+
+    if (measureForm) {
+      measureForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Спасибо! Заявка отправлена мастеру Петру. Он свяжется с вами в ближайшее время.');
+        modal.style.display = 'none';
+        measureForm.reset();
+      });
+    }
+
+    // Мобильное меню
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const studioNav = document.getElementById('studioNav');
+
+    if (mobileMenuBtn && studioNav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = studioNav.style.display === 'flex';
+        studioNav.style.display = isOpen ? 'none' : 'flex';
+        if (!isOpen) {
+          studioNav.style.position = 'absolute';
+          studioNav.style.top = '80px';
+          studioNav.style.left = '20px';
+          studioNav.style.right = '20px';
+          studioNav.style.flexDirection = 'column';
+          studioNav.style.background = '#FFFFFF';
+          studioNav.style.padding = '16px';
+          studioNav.style.border = '1px solid #E2E8F0';
+          studioNav.style.borderRadius = '20px';
+          studioNav.style.boxShadow = '0 15px 35px rgba(0,0,0,0.1)';
+        }
+      });
+
+      // Автоматическое закрытие меню при клике на якорную ссылку
+      studioNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 840) {
+            studioNav.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // ================= АККОРДЕОН FAQ =================
+    const faqItems = document.querySelectorAll('.faq-accordion-item');
+    faqItems.forEach(item => {
+      const headBtn = item.querySelector('.faq-head-btn');
+      if (headBtn) {
+        headBtn.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          faqItems.forEach(otherItem => {
+            otherItem.classList.remove('open');
+            const icon = otherItem.querySelector('.faq-toggle-icon');
+            if (icon) icon.textContent = '+';
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            const icon = item.querySelector('.faq-toggle-icon');
+            if (icon) icon.textContent = '✕';
+          }
+        });
+      }
+    });
+
+    // ================= ПЛАВНАЯ АНИМАЦИЯ ПРИ СКРОЛЛЕ & SCROLLSPY =================
+    const initScrollAnimations = () => {
+      const animatedEls = document.querySelectorAll('.reveal-on-scroll, .reveal-scale');
+
+      if (!('IntersectionObserver' in window)) {
+        animatedEls.forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px 50px 0px',
+        threshold: 0.01
+      };
+
+      const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      animatedEls.forEach(el => {
+        scrollObserver.observe(el);
+      });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initScrollAnimations);
+    } else {
+      initScrollAnimations();
+    }
+
+      // Полоса прогресса скролла страницы
+      const progressBar = document.getElementById('scrollProgressBar');
+      if (progressBar) {
+        window.addEventListener('scroll', () => {
+          const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          if (height > 0) {
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + '%';
+          }
+        }, { passive: true });
+      }
+
+      // ScrollSpy: подсвечивание активного пункта меню
+      const navLinks = document.querySelectorAll('.studio-nav-link');
+      const sections = ['catalog', 'prices', 'portfolio', 'about', 'reviews', 'contacts']
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+      window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        const scrollPosition = window.scrollY + 140;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+
+        if (currentSectionId) {
+          navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === '#' + currentSectionId) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      }, { passive: true });
+
+      // ================= 152-ФЗ: ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ =================
+      const privacyModal = document.getElementById('privacyModal');
+      window.openPrivacyModal = function(e) {
+        if (e) e.preventDefault();
+        if (privacyModal) privacyModal.classList.add('is-open');
+      };
+      window.closePrivacyModal = function() {
+        if (privacyModal) privacyModal.classList.remove('is-open');
+      };
+      if (privacyModal) {
+        privacyModal.addEventListener('click', (e) => {
+          if (e.target === privacyModal) closePrivacyModal();
+        });
+      }
+
+      // ================= КУКИ-БАННЕР (COOKIE CONSENT) =================
+      const cookieBanner = document.getElementById('cookieBanner');
+      if (cookieBanner) {
+        try {
+          if (localStorage.getItem('newline_cookie_accepted') === 'true') {
+            cookieBanner.classList.add('hidden');
+          }
+        } catch(err) {
+          // ignore localStorage security restrictions
+        }
+      }
+      window.acceptCookies = function() {
+        try {
+          localStorage.setItem('newline_cookie_accepted', 'true');
+        } catch(err) {}
+        if (cookieBanner) cookieBanner.classList.add('hidden');
+      };
+
+      // Динамический год в подвале
+      const footerYear = document.getElementById('footerYear');
+      if (footerYear) {
+        footerYear.textContent = new Date().getFullYear();
+      }
+  </script>
+</body>
+</html>
