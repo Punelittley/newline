@@ -85,23 +85,32 @@
 
     a { text-decoration: none; color: inherit; }
 
-    /* ================= 1. СТАТИЧНЫЙ ЗАКРУГЛЕННЫЙ ХЕДЕР ================= */
+    /* ================= 1. СТАТИЧНЫЙ ХЕДЕР ================= */
     .header-outer {
-      padding: 20px 0 10px;
-      position: relative; /* СТАТИЧНЫЙ, НЕ ЛИПНЕТ К ЭКРАНУ */
+      position: static; /* СТАТИЧНЫЙ, НЕ ЛИПНЕТ К ЭКРАНУ */
+      width: 100%;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      padding: 0;
       z-index: 100;
     }
 
+    .header-outer .container {
+      max-width: 1400px;
+      padding: 0 clamp(20px, 4vw, 60px);
+    }
+
     .studio-header {
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННЫЙ */
-      box-shadow: var(--shadow-soft);
-      padding: 10px 24px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 14px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
+      width: 100%;
     }
 
     .brand-mark {
@@ -2426,11 +2435,6 @@
       
       <!-- Левая колонка: Текст, форма, преимущества -->
       <div class="hero-fw-col-left reveal-on-scroll">
-        <div class="hero-fw-badge">
-          <span class="badge-dot-live"></span>
-          <span>Студия натяжных потолков • г. Урай с 2011 года</span>
-        </div>
-
         <h1 class="hero-fw-title">
           Премиальные натяжные потолки <br>
           <span class="hero-fw-accent">& дизайнерский свет</span> в г. Урай
