@@ -2221,44 +2221,65 @@
     .cookie-banner {
       position: fixed;
       bottom: 24px;
-      right: 24px;
-      left: auto;
-      transform: none;
+      left: 50%;
+      transform: translateX(-50%);
       background: #0F172A;
       color: #E2E8F0;
-      border-radius: 18px;
-      padding: 16px 20px;
+      border-radius: var(--radius-pill);
+      padding: 12px 24px;
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 420px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 720px;
       width: calc(100% - 48px);
-      z-index: 5000;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
-      font-size: 0.82rem;
+      z-index: 9999;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.84rem;
       font-weight: 500;
       line-height: 1.45;
-      animation: cookieFadeIn 0.4s ease;
+      animation: cookieFadeIn 0.35s ease forwards;
     }
-    .cookie-banner.hidden { display: none; }
-    .cookie-banner-text { flex: 1; min-width: 200px; }
+    .cookie-banner.hidden { display: none !important; }
+    .cookie-banner-text { flex: 1; }
     .cookie-banner-text a { color: #FF7040; text-decoration: underline; }
     .cookie-accept-btn {
       background: var(--accent);
       color: #FFFFFF;
       border: none;
       border-radius: var(--radius-pill);
-      padding: 9px 22px;
+      padding: 9px 24px;
+      font-family: inherit;
       font-size: 0.84rem;
       font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
       flex-shrink: 0;
+      transition: all 0.2s ease;
     }
-    .cookie-accept-btn:hover { background: var(--accent-hover); }
+    .cookie-accept-btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+    @media (max-width: 680px) {
+      .cookie-banner {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 16px;
+        gap: 12px;
+        text-align: center;
+        bottom: 16px;
+        width: calc(100% - 32px);
+      }
+      .cookie-accept-btn {
+        width: 100%;
+        padding: 11px;
+      }
+    }
     @keyframes cookieFadeIn {
-      from { opacity: 0; transform: translateX(-50%) translateY(16px); }
-      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+      from { opacity: 0; transform: translate(-50%, 16px); }
+      to { opacity: 1; transform: translate(-50%, 0); }
     }
   </style>
 </head>
@@ -2326,10 +2347,10 @@
 
         <!-- Кнопки действий -->
         <div class="hero-fw-actions">
-          <button type="button" class="btn-pill-primary" data-modal-target="measureModal">
+          <a href="#calculator" class="btn-pill-primary">
             Рассчитать стоимость
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
+          </a>
           <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-ghost">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
             Задать вопрос в WhatsApp
@@ -2372,12 +2393,6 @@
       <div class="hero-fw-col-right reveal-on-scroll">
         <div class="hero-fw-media-container">
           <img src="./assets/images/work-lines-cylinders.png" alt="Дизайнерский натяжной потолок в Урае" class="hero-fw-photo">
-          
-          <!-- Плавающие плашки -->
-          <div class="hero-fw-chip chip-top">
-            <span class="chip-dot-accent"></span>
-            <span>EuroKRAAB 2.0 • Теневой зазор</span>
-          </div>
 
           <div class="hero-fw-chip chip-mid">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
@@ -2526,43 +2541,13 @@
       </div>
 
       <div class="grid-solutions">
-        <!-- 1. EuroKraab -->
-        <div class="card-solution reveal-on-scroll reveal-delay-1">
-          <div class="card-solution-top">
-            <h3 class="card-title">EuroKRAAB 2.0</h3>
-            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать EuroKRAAB">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </button>
-          </div>
-          <div class="card-solution-media">
-            <span class="card-badge-pill">Теневой зазор</span>
-            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Теневой потолок EuroKRAAB" loading="lazy">
-          </div>
-          <div class="card-solution-body">
-            <p class="card-desc">
-              Идеальный теневой зазор 6 мм по периметру стены. Полный отказ от пластиковых маскировочных заглушек и потолочных плинтусов.
-            </p>
-            <div class="card-tags">
-              <span class="tag-pill">Четкие углы 90°</span>
-              <span class="tag-pill">Под покраску и обои</span>
-            </div>
-            <div class="card-footer">
-              <div class="card-price">
-                <span class="card-price-value">от 950 ₽</span>
-                <span class="card-price-unit">/ м.п.</span>
-              </div>
-              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
-            </div>
-          </div>
-        </div>
-
         <!-- 2. Световые линии -->
         <div class="card-solution reveal-on-scroll reveal-delay-2">
           <div class="card-solution-top">
             <h3 class="card-title">Световые линии SWG</h3>
-            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Световые линии">
+            <a href="#calculator" class="card-arrow-action" aria-label="Рассчитать">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </button>
+            </a>
           </div>
           <div class="card-solution-media">
             <span class="card-badge-pill">Световой дизайн</span>
@@ -2581,7 +2566,7 @@
                 <span class="card-price-value">от 2 500 ₽</span>
                 <span class="card-price-unit">/ пог. м</span>
               </div>
-              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+              <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-ghost btn-pill-sm">Заказать</a>
             </div>
           </div>
         </div>
@@ -2590,9 +2575,9 @@
         <div class="card-solution reveal-on-scroll reveal-delay-3">
           <div class="card-solution-top">
             <h3 class="card-title">Магнитные треки 48V</h3>
-            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Магнитные треки">
+            <a href="#calculator" class="card-arrow-action" aria-label="Рассчитать">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </button>
+            </a>
           </div>
           <div class="card-solution-media">
             <span class="card-badge-pill">Архитектурный свет</span>
@@ -2611,7 +2596,7 @@
                 <span class="card-price-value">от 500 ₽</span>
                 <span class="card-price-unit">/ со светом</span>
               </div>
-              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+              <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-ghost btn-pill-sm">Заказать</a>
             </div>
           </div>
         </div>
@@ -2620,9 +2605,9 @@
         <div class="card-solution reveal-on-scroll reveal-delay-4">
           <div class="card-solution-top">
             <h3 class="card-title">Парящие натяжные потолки</h3>
-            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Парящие потолки">
+            <a href="#calculator" class="card-arrow-action" aria-label="Рассчитать">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </button>
+            </a>
           </div>
           <div class="card-solution-media">
             <span class="card-badge-pill">Мягкий контур</span>
@@ -2641,7 +2626,7 @@
                 <span class="card-price-value">от 800 ₽</span>
                 <span class="card-price-unit">/ пог. м</span>
               </div>
-              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+              <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-ghost btn-pill-sm">Заказать</a>
             </div>
           </div>
         </div>
@@ -2650,9 +2635,9 @@
         <div class="card-solution reveal-on-scroll reveal-delay-5">
           <div class="card-solution-top">
             <h3 class="card-title">Монтаж ниши под карниз</h3>
-            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Нишу под карниз">
+            <a href="#calculator" class="card-arrow-action" aria-label="Рассчитать">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </button>
+            </a>
           </div>
           <div class="card-solution-media">
             <span class="card-badge-pill">Ниша под шторы</span>
@@ -2671,7 +2656,7 @@
                 <span class="card-price-value">от 1 000 ₽</span>
                 <span class="card-price-unit">/ пог. м</span>
               </div>
-              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+              <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-ghost btn-pill-sm">Заказать</a>
             </div>
           </div>
         </div>
@@ -2680,9 +2665,9 @@
         <div class="card-solution reveal-on-scroll reveal-delay-6">
           <div class="card-solution-top">
             <h3 class="card-title">Монтаж натяжных потолков</h3>
-            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Потолки MSD">
+            <a href="#calculator" class="card-arrow-action" aria-label="Рассчитать">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </button>
+            </a>
           </div>
           <div class="card-solution-media">
             <span class="card-badge-pill">Классика</span>
@@ -2701,7 +2686,7 @@
                 <span class="card-price-value">от 550 ₽</span>
                 <span class="card-price-unit">/ м²</span>
               </div>
-              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+              <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-ghost btn-pill-sm">Заказать</a>
             </div>
           </div>
         </div>
@@ -2710,9 +2695,9 @@
         <div class="card-solution reveal-on-scroll reveal-delay-7">
           <div class="card-solution-top">
             <h3 class="card-title">Фактурные и 2-уровневые</h3>
-            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Рассчитать Двухуровневые">
+            <a href="#calculator" class="card-arrow-action" aria-label="Рассчитать">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </button>
+            </a>
           </div>
           <div class="card-solution-media">
             <span class="card-badge-pill">Сложная геометрия</span>
@@ -2731,7 +2716,7 @@
                 <span class="card-price-value">от 650 ₽</span>
                 <span class="card-price-unit">/ м²</span>
               </div>
-              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+              <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-ghost btn-pill-sm">Заказать</a>
             </div>
           </div>
         </div>
@@ -2740,9 +2725,9 @@
         <div class="card-solution reveal-on-scroll reveal-delay-8">
           <div class="card-solution-top">
             <h3 class="card-title">Ремонт и слив воды</h3>
-            <button type="button" class="card-arrow-action" data-modal-target="measureModal" aria-label="Вызвать на Ремонт или Слив воды">
+            <a href="#calculator" class="card-arrow-action" aria-label="Рассчитать">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </button>
+            </a>
           </div>
           <div class="card-solution-media">
             <span class="card-badge-pill">Сервис NewLine</span>
@@ -2761,7 +2746,7 @@
                 <span class="card-price-value">от 500 ₽</span>
                 <span class="card-price-unit">/ выезд</span>
               </div>
-              <button type="button" class="btn-pill-ghost btn-pill-sm" data-modal-target="measureModal">Заказать</button>
+              <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-ghost btn-pill-sm">Заказать</a>
             </div>
           </div>
         </div>
@@ -2802,9 +2787,9 @@
             <li>Экологично, 100% без запаха и пыли</li>
             <li>Гарантия на полотно и монтаж</li>
           </ul>
-          <button type="button" class="btn-pill-ghost" style="width: 100%; justify-content: center;" data-modal-target="measureModal">
+          <a href="#calculator" class="btn-pill-ghost" style="width: 100%; justify-content: center;">
             Выбрать Базовый
-          </button>
+          </a>
         </div>
 
         <!-- Тариф 2: Теневой стиль (Хит) -->
@@ -2824,9 +2809,9 @@
             <li>Возможность переклейки обоев без снятия потолка</li>
             <li>Чистый монтаж с пылесосом</li>
           </ul>
-          <button type="button" class="btn-pill-primary" style="width: 100%; justify-content: center;" data-modal-target="measureModal">
+          <a href="#calculator" class="btn-pill-primary" style="width: 100%; justify-content: center;">
             Выбрать EuroKRAAB
-          </button>
+          </a>
         </div>
 
         <!-- Тариф 3: Световой дизайн -->
@@ -2845,9 +2830,9 @@
             <li>Установка надежных блоков питания и диммеров</li>
             <li>Индивидуальный световой расчет комнаты</li>
           </ul>
-          <button type="button" class="btn-pill-ghost" style="width: 100%; justify-content: center;" data-modal-target="measureModal">
+          <a href="#calculator" class="btn-pill-ghost" style="width: 100%; justify-content: center;">
             Выбрать Световой
-          </button>
+          </a>
         </div>
 
       </div>
@@ -3132,9 +3117,9 @@
             </div>
           </div>
         </div>
-        <button type="button" class="btn-pill-primary btn-pill-sm" data-modal-target="measureModal">
+        <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-primary btn-pill-sm">
           Вызвать мастера на замер (0 ₽)
-        </button>
+        </a>
       </div>
 
     </div>
@@ -3372,9 +3357,9 @@
 
       <!-- Кнопка вызова замера -->
       <div style="text-align: center; margin-top: 32px; margin-bottom: 10px;" class="reveal-on-scroll">
-        <button type="button" class="btn-pill-primary" data-modal-target="measureModal">
+        <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-primary">
           Оставить заявку на бесплатный замер →
-        </button>
+        </a>
       </div>
     </div>
   </section>
@@ -3489,9 +3474,9 @@
           </div>
 
           <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border);">
-            <button type="button" class="btn-pill-primary" style="width: 100%; justify-content: center;" data-modal-target="measureModal">
+            <a href="#calculator" class="btn-pill-primary" style="width: 100%; justify-content: center;">
               Записаться на бесплатный замер (0 ₽)
-            </button>
+            </a>
           </div>
         </div>
 
@@ -3509,9 +3494,9 @@
       </p>
       
       <div class="cta-buttons">
-        <button type="button" class="btn-pill-primary" data-modal-target="measureModal">
+        <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-primary">
           Вызвать мастера на замер (0 ₽)
-        </button>
+        </a>
         <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-wa">
           Написать в WhatsApp
         </a>
@@ -3560,30 +3545,6 @@
 
 
 
-  <!-- ================= 8. МОДАЛЬНОЕ ОКНО ЗАПИСИ НА ЗАМЕР ================= -->
-  <div class="modal-overlay" id="measureModal">
-    <div class="modal-box">
-      <button class="modal-close" aria-label="Закрыть">✕</button>
-      <h3 class="modal-title">Бесплатный замер</h3>
-      <p class="modal-desc">Мастер перезвонит вам в течение 15 минут для согласования удобного времени.</p>
-      
-      <form id="measureForm">
-        <input type="text" class="modal-input" placeholder="Ваше имя" required>
-        <input type="tel" class="modal-input" placeholder="+7 (___) ___-__-__" required>
-
-        <!-- 152-ФЗ: чекбокс согласия на обработку персональных данных -->
-        <label class="consent-label">
-          <input type="checkbox" class="consent-checkbox" required>
-          <span>Нажимая кнопку, я соглашаюсь с&nbsp;<a href="#" onclick="openPrivacyModal(event)" class="consent-link">Политикой конфиденциальности</a>&nbsp;и даю согласие на обработку персональных данных в соответствии с&nbsp;Федеральным законом №&nbsp;152-ФЗ.</span>
-        </label>
-
-        <button type="submit" class="btn-pill-primary" style="width: 100%;">
-          Записаться на замер
-        </button>
-      </form>
-    </div>
-  </div>
-
   <!-- ================= 9. ЗАКРУГЛЕННЫЙ ЛАЙТБОКС (ПРОСМОТР ФОТО РАБОТ) ================= -->
   <div class="lightbox-modal" id="lightboxModal">
     <div class="lightbox-content">
@@ -3591,9 +3552,9 @@
       <img src="" alt="" class="lightbox-img" id="lightboxImg">
       <div class="lightbox-caption">
         <div class="lightbox-caption-text" id="lightboxCaption"></div>
-        <button type="button" class="btn-pill-primary btn-pill-sm" data-modal-target="measureModal">
+        <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-primary btn-pill-sm">
           Хочу такой же потолок
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -3660,40 +3621,6 @@
         if (e.target === lightboxModal) {
           lightboxModal.style.display = 'none';
         }
-      });
-    }
-
-    // Модальное окно замера
-    const modal = document.getElementById('measureModal');
-    const modalButtons = document.querySelectorAll('[data-modal-target="measureModal"]');
-    const modalClose = document.querySelector('.modal-close');
-    const measureForm = document.getElementById('measureForm');
-
-    modalButtons.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (modal) modal.style.display = 'flex';
-      });
-    });
-
-    if (modalClose && modal) {
-      modalClose.addEventListener('click', () => {
-        modal.style.display = 'none';
-      });
-    }
-
-    if (modal) {
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) modal.style.display = 'none';
-      });
-    }
-
-    if (measureForm) {
-      measureForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Спасибо! Заявка отправлена мастеру Петру. Он свяжется с вами в ближайшее время.');
-        modal.style.display = 'none';
-        measureForm.reset();
       });
     }
 
