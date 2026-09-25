@@ -16,10 +16,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23FF4800'/><path d='M25 75 L25 25 L45 25 L75 75 L75 25' stroke='white' stroke-width='12' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 
-  <!-- Google Fonts: Unbounded & Onest -->
+  <!-- Google Fonts: Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -51,8 +51,8 @@
       --shadow-pill: 0 4px 14px rgba(255, 72, 0, 0.25);
       --shadow-wa: 0 4px 14px rgba(37, 211, 102, 0.22);
       
-      --font-body: 'Onest', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-heading: 'Unbounded', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --font-family: var(--font-body);
     }
 
@@ -306,62 +306,60 @@
       border-radius: var(--radius-pill);
     }
 
-    /* ================= 3. ARCHITECTURAL BENTO HERO ================= */
+    /* ================= 3. ELEGANT ARCHITECTURAL BENTO HERO ================= */
     .hero-section {
-      padding: 10px 0 30px;
+      padding: 15px 0 25px;
       position: relative;
       width: 100%;
     }
 
-    .hero-arch-container {
-      background: linear-gradient(175deg, #0B0F17 0%, #111827 60%, #0F172A 100%);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+    .hero-clean-container {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
       border-radius: var(--radius-card); /* 26px */
-      padding: clamp(36px, 5vw, 64px) clamp(24px, 4vw, 56px);
-      box-shadow: 0 20px 50px -15px rgba(15, 23, 42, 0.4);
+      padding: clamp(32px, 4vw, 56px);
+      box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.06), 0 0 1px rgba(15, 23, 42, 0.08);
       position: relative;
       overflow: hidden;
     }
 
-    /* Ambient warm/amber glow in corner */
-    .hero-arch-container::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: -80px;
-      width: 480px;
-      height: 480px;
-      background: radial-gradient(circle, rgba(255, 72, 0, 0.22) 0%, rgba(245, 158, 11, 0.08) 50%, transparent 70%);
-      filter: blur(80px);
-      pointer-events: none;
-      z-index: 1;
+    .hero-clean-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(24px, 4vw, 48px);
+      align-items: center;
     }
 
-    .hero-arch-head {
-      position: relative;
-      z-index: 2;
-      max-width: 900px;
-      margin-bottom: 36px;
+    @media (max-width: 960px) {
+      .hero-clean-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
     }
 
-    .hero-arch-badge {
+    /* Левая колонка */
+    .hero-left-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero-clean-badge {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      backdrop-filter: blur(12px);
-      padding: 6px 16px;
+      background: #FFF4EE;
+      border: 1px solid rgba(255, 72, 0, 0.22);
+      padding: 7px 16px;
       border-radius: var(--radius-pill);
       font-size: 0.8rem;
       font-weight: 700;
-      color: #E2E8F0;
-      margin-bottom: 22px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      color: #E63E00;
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
     }
 
-    .hero-arch-badge .badge-dot-live {
+    .hero-clean-badge .badge-dot-live {
       width: 8px;
       height: 8px;
       border-radius: 50%;
@@ -370,381 +368,318 @@
       animation: pulseDot 2s infinite ease-in-out;
     }
 
-    .hero-arch-title {
-      font-size: clamp(2.2rem, 4.4vw, 3.6rem);
-      line-height: 1.14;
+    .hero-main-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.1rem, 3.6vw, 3.2rem);
+      line-height: 1.16;
       font-weight: 800;
-      color: #FFFFFF;
+      color: #0F172A;
+      letter-spacing: -0.025em;
       margin-bottom: 18px;
     }
 
-    .hero-accent-text {
-      background: linear-gradient(135deg, #FF5500 0%, #FFA843 60%, #FF8800 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .hero-title-accent {
+      color: var(--accent);
       display: inline-block;
     }
 
-    .hero-arch-desc {
-      font-size: 1.08rem;
-      line-height: 1.68;
-      color: #94A3B8;
+    .hero-main-desc {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: #475569;
       margin-bottom: 28px;
-      max-width: 720px;
+      max-width: 580px;
     }
 
-    .hero-arch-cta-row {
+    /* Быстрая капсула записи */
+    .hero-booking-capsule {
+      width: 100%;
+      max-width: 540px;
+      background: #F8FAFC;
+      border: 1.5px solid #E2E8F0;
+      border-radius: var(--radius-pill);
+      padding: 6px 6px 6px 18px;
       display: flex;
       align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+      transition: all 0.25s ease;
+      margin-bottom: 14px;
     }
 
-    /* 2-Card Bento Showcase in Hero */
-    .hero-arch-bento-grid {
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 24px;
-      position: relative;
-      z-index: 2;
+    .hero-booking-capsule:focus-within {
+      background: #FFFFFF;
+      border-color: var(--accent);
+      box-shadow: 0 6px 20px rgba(255, 72, 0, 0.12);
     }
 
-    @media (max-width: 960px) {
-      .hero-arch-bento-grid {
-        grid-template-columns: 1fr;
+    .hero-booking-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .hero-booking-input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      outline: none;
+      font-family: var(--font-body);
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #0F172A;
+    }
+
+    .hero-booking-input::placeholder {
+      color: #94A3B8;
+      font-weight: 500;
+    }
+
+    .hero-booking-submit {
+      background: var(--accent);
+      color: #FFFFFF;
+      border: none;
+      border-radius: var(--radius-pill);
+      padding: 13px 24px;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(255, 72, 0, 0.25);
+    }
+
+    .hero-booking-submit:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(255, 72, 0, 0.35);
+    }
+
+    @media (max-width: 580px) {
+      .hero-booking-capsule {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 12px;
+      }
+      .hero-booking-input-wrap {
+        width: 100%;
+        padding: 6px 8px;
+      }
+      .hero-booking-submit {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
       }
     }
 
-    /* Card 1: Panoramic Interior Window */
-    .hero-bento-media-card {
-      border-radius: 22px;
-      overflow: hidden;
-      position: relative;
-      min-height: 360px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    /* Мета-ссылки под формой */
+    .hero-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: #64748B;
+      font-weight: 600;
+      margin-bottom: 28px;
     }
 
-    .hero-bento-media-card img {
+    .hero-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .meta-dot-green {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10B981;
+    }
+
+    .hero-meta-sep {
+      color: #CBD5E1;
+    }
+
+    .hero-meta-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #0F172A;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    .hero-meta-wa:hover {
+      color: #10B981;
+    }
+
+    /* 3 карточки преимуществ */
+    .hero-perks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      width: 100%;
+      border-top: 1px solid var(--border);
+      padding-top: 22px;
+    }
+
+    @media (max-width: 680px) {
+      .hero-perks-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+
+    .hero-perk-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .perk-icon-circle {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #FFF4EE;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .perk-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .perk-text strong {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #0F172A;
+      line-height: 1.25;
+    }
+
+    .perk-text span {
+      font-size: 0.76rem;
+      color: #64748B;
+      line-height: 1.3;
+    }
+
+    /* Правая визуальная витрина */
+    .hero-showcase-box {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      height: 100%;
+      min-height: 440px;
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 36px -10px rgba(15, 23, 42, 0.1);
+    }
+
+    @media (max-width: 960px) {
+      .hero-showcase-box {
+        min-height: 320px;
+      }
+    }
+
+    .hero-showcase-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.6s ease;
+      transition: transform 0.5s ease;
     }
 
-    .hero-bento-media-card:hover img {
-      transform: scale(1.03);
-    }
-
-    .hero-bento-media-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(11, 15, 23, 0.78) 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 24px;
-    }
-
-    .hero-media-chips {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .hero-chip-pill {
-      background: rgba(15, 23, 42, 0.82);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      color: #FFFFFF;
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding: 6px 14px;
-      border-radius: var(--radius-pill);
-    }
-
-    /* Card 2: Quick Booking Glass Card */
-    .hero-bento-action-card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 22px;
-      padding: 32px 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      color: #FFFFFF;
-    }
-
-    .hero-action-card-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: #FFFFFF;
-      margin-bottom: 8px;
-    }
-
-    .hero-action-card-desc {
-      font-size: 0.88rem;
-      color: #94A3B8;
-      line-height: 1.55;
-      margin-bottom: 22px;
-    }
-
-    .hero-quick-form-card {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .hero-quick-input-group {
-      display: flex;
-      align-items: center;
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: var(--radius-pill);
-      padding: 4px 6px 4px 16px;
-      gap: 10px;
-      transition: all 0.2s ease;
-    }
-
-    .hero-quick-input-group:focus-within {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(255, 72, 0, 0.25);
-    }
-
-    .hero-quick-input-group svg {
-      color: #94A3B8;
-      flex-shrink: 0;
-    }
-
-    .hero-quick-input {
-      flex: 1;
-      background: transparent;
-      border: none;
-      outline: none;
-      font-family: inherit;
-      font-size: 0.94rem;
-      font-weight: 500;
-      color: #FFFFFF;
-      min-width: 0;
-    }
-
-    .hero-quick-input::placeholder {
-      color: #64748B;
-    }
-
-    .hero-quick-submit {
-      background: var(--accent);
-      color: #FFFFFF;
-      border: none;
-      font-family: inherit;
-      font-size: 0.88rem;
-      font-weight: 700;
-      padding: 11px 20px;
-      border-radius: var(--radius-pill);
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 12px rgba(255, 72, 0, 0.3);
-    }
-
-    .hero-quick-submit:hover {
-      background: var(--accent-hover);
-      transform: translateY(-1px);
-    }
-
-    .hero-action-perks-list {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 18px;
-    }
-
-    .hero-action-perk-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.82rem;
-      color: #CBD5E1;
-      font-weight: 600;
-    }
-
-    .hero-action-perk-item svg {
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-
-    .hero-metric-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero-metric-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      right: -8px;
-      top: 15%;
-      height: 70%;
-      width: 1px;
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-    .hero-metric-val {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: #FFFFFF;
-      line-height: 1.2;
-    }
-
-    .hero-metric-val span {
-      color: var(--accent);
-    }
-
-    .hero-metric-lbl {
-      font-size: 0.8rem;
-      color: #CBD5E1;
-      margin-top: 3px;
-      font-weight: 500;
-    }
-
-    @media (max-width: 880px) {
-      .hero-metric-bar {
-        grid-template-columns: repeat(2, 1fr);
-        border-radius: var(--radius-card-sm);
-        padding: 20px;
-        gap: 20px;
-      }
-      .hero-metric-item:nth-child(2)::after {
-        display: none;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-metric-bar {
-        grid-template-columns: 1fr;
-      }
-      .hero-metric-item::after {
-        display: none !important;
-      }
-    }
-
-    /* Кнопка стекло для hero */
-    .btn-pill-glass {
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      color: #FFFFFF !important;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      padding: 15px 28px;
-      border-radius: var(--radius-pill);
-      font-weight: 700;
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .btn-pill-glass:hover {
-      background: rgba(255, 255, 255, 0.22);
-      border-color: #FFFFFF;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Правая колонка Hero: фотокарточка (обратная совместимость) */
-    .hero-visual-card {
-      position: relative;
-      border-radius: var(--radius-card); /* ЗАКРУГЛЕННЫЙ */
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-hover);
-      background: var(--bg-alt);
-    }
-
-    .hero-visual-card img {
-      width: 100%;
-      height: 480px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-
-    .hero-visual-card:hover img {
+    .hero-showcase-box:hover .hero-showcase-img {
       transform: scale(1.02);
     }
 
-    .hero-floating-badge {
+    /* Плавающие стеклянные плашки на фото */
+    .hero-glass-pill {
       position: absolute;
-      top: 18px;
-      left: 18px;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-pill); /* ЗАКРУГЛЕННЫЙ */
-      padding: 8px 18px;
-      font-size: 0.82rem;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: var(--radius-pill);
+      padding: 8px 16px;
+      color: #0F172A;
+      font-size: 0.8rem;
       font-weight: 700;
-      color: var(--text-main);
-      box-shadow: var(--shadow-soft);
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 8px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      z-index: 2;
     }
 
-    .hero-card-bottom {
+    .hero-glass-pill.top-pill {
+      top: 20px;
+      left: 20px;
+    }
+
+    .hero-glass-pill.mid-pill {
+      top: 68px;
+      left: 20px;
+    }
+
+    .glass-pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .hero-glass-review {
       position: absolute;
-      bottom: 18px;
-      left: 18px;
-      right: 18px;
-      background: rgba(15, 23, 42, 0.9);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-card-sm); /* ЗАКРУГЛЕННЫЙ */
-      padding: 16px 20px;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 18px;
+      padding: 14px 18px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 14px;
+      gap: 16px;
+      color: #FFFFFF;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      z-index: 2;
+    }
+
+    .hero-review-stars {
+      color: #F59E0B;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+
+    .hero-review-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .hero-review-info strong {
+      font-size: 0.88rem;
+      font-weight: 700;
       color: #FFFFFF;
     }
 
-    .hero-card-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .author-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-pill);
-      background: var(--accent);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-
-    .author-name {
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    .author-sub {
-      font-size: 0.74rem;
+    .hero-review-info span {
+      font-size: 0.76rem;
       color: #94A3B8;
     }
 
@@ -2325,23 +2260,23 @@
     .cookie-banner {
       position: fixed;
       bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%);
+      right: 24px;
+      left: auto;
+      transform: none;
       background: #0F172A;
       color: #E2E8F0;
-      border-radius: var(--radius-pill);
-      padding: 14px 20px;
+      border-radius: 18px;
+      padding: 16px 20px;
       display: flex;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-      max-width: 680px;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 420px;
       width: calc(100% - 48px);
       z-index: 5000;
-      box-shadow: 0 12px 36px rgba(0,0,0,0.28);
-      font-size: 0.84rem;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+      font-size: 0.82rem;
       font-weight: 500;
-      line-height: 1.4;
+      line-height: 1.45;
       animation: cookieFadeIn 0.4s ease;
     }
     .cookie-banner.hidden { display: none; }
@@ -2416,74 +2351,107 @@
   <!-- ================= 2. ПЕРВЫЙ ЭКРАН (ARCHITECTURAL BENTO HERO) ================= -->
   <section class="hero-section">
     <div class="container">
-      <div class="hero-arch-container reveal-on-scroll">
-        <div class="hero-arch-head">
-          <div class="hero-arch-badge">
-            <span class="badge-dot-live"></span>
-            <span>Студия натяжных потолков • г. Урай с 2011 года</span>
-          </div>
-          <h1 class="hero-arch-title">
-            Премиальные натяжные потолки <br>
-            <span class="hero-accent-text">& дизайнерский свет в г. Урай</span>
-          </h1>
-          <p class="hero-arch-desc">
-            Безупречная геометрия теневых систем EuroKRAAB, скрытые световые линии и премиальные полотна MSD. Чистый монтаж без пыли от 1 дня с гарантией по договору.
-          </p>
-          <div class="hero-arch-cta-row">
-            <button type="button" class="btn-pill-primary" data-modal-target="measureModal">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              Бесплатный замер (0 ₽)
-            </button>
-            <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="btn-pill-wa">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-              Чат в WhatsApp
-            </a>
-            <a href="tel:+79088969179" class="btn-pill-glass">
-              +7 (908) 896-91-79
-            </a>
-          </div>
-        </div>
-
-        <!-- Bento Showcase: Панорама + Быстрая форма -->
-        <div class="hero-arch-bento-grid">
-          <div class="hero-bento-media-card">
-            <img src="./assets/images/hero-ceilings-composite.jpg" alt="Дизайнерские потолки NewLine в Урае">
-            <div class="hero-bento-media-overlay">
-              <div class="hero-media-chips">
-                <span class="hero-chip-pill">EuroKRAAB 2.0</span>
-                <span class="hero-chip-pill">Световые линии SWG</span>
-                <span class="hero-chip-pill">Монтаж без пыли</span>
-              </div>
+      <div class="hero-clean-container reveal-on-scroll">
+        <div class="hero-clean-grid">
+          
+          <!-- Левая колонка: Текст и действие -->
+          <div class="hero-left-content">
+            <div class="hero-clean-badge">
+              <span class="badge-dot-live"></span>
+              <span>Студия натяжных потолков • г. Урай с 2011 года</span>
             </div>
-          </div>
 
-          <div class="hero-bento-action-card">
-            <div>
-              <h3 class="hero-action-card-title">Запись на замер с образцами</h3>
-              <p class="hero-action-card-desc">Мастер приедет с лазерным дальномером, чемоданом профилей и каталогом полотен. Выезд по г. Урай — 0 ₽.</p>
-              <form class="hero-quick-form-card" id="heroQuickForm">
-                <div class="hero-quick-input-group">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  <input type="tel" class="hero-quick-input" id="heroPhoneInput" placeholder="+7 (___) ___-__-__" required>
-                  <button type="submit" class="hero-quick-submit">Записаться</button>
+            <h1 class="hero-main-title">
+              Премиальные натяжные потолки <br>
+              <span class="hero-title-accent">& дизайнерский свет</span> в г. Урай
+            </h1>
+
+            <p class="hero-main-desc">
+              Безупречная геометрия теневых систем EuroKRAAB, скрытые световые линии и премиальные полотна MSD. Чистый монтаж перфоратором с пылесосом за 1 день с гарантией по договору.
+            </p>
+
+            <!-- Быстрая форма записи на замер -->
+            <form class="hero-booking-capsule" id="heroQuickForm">
+              <div class="hero-booking-input-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <input type="tel" class="hero-booking-input" id="heroPhoneInput" placeholder="+7 (___) ___-__-__" required>
+              </div>
+              <button type="submit" class="hero-booking-submit">
+                <span>Записаться на замер (0 ₽)</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </form>
+
+            <!-- Мета-информация -->
+            <div class="hero-meta-row">
+              <div class="hero-meta-item">
+                <span class="meta-dot-green"></span>
+                <span>Выезд мастера с образцами — бесплатно (0 ₽)</span>
+              </div>
+              <span class="hero-meta-sep">•</span>
+              <a href="https://wa.me/79088967372" target="_blank" rel="noopener" class="hero-meta-wa">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                <span>Чат в WhatsApp</span>
+              </a>
+            </div>
+
+            <!-- Буллеты надежности -->
+            <div class="hero-perks-grid">
+              <div class="hero-perk-card">
+                <div class="perk-icon-circle">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF4800" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-              </form>
+                <div class="perk-text">
+                  <strong>Монтаж без пыли</strong>
+                  <span>с перфоратором и пылесосом</span>
+                </div>
+              </div>
+              <div class="hero-perk-card">
+                <div class="perk-icon-circle">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF4800" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="perk-text">
+                  <strong>Оплата по факту</strong>
+                  <span>только после приемки работ</span>
+                </div>
+              </div>
+              <div class="hero-perk-card">
+                <div class="perk-icon-circle">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF4800" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="perk-text">
+                  <strong>Рассрочка 0%</strong>
+                  <span>без банков и переплат</span>
+                </div>
+              </div>
             </div>
-            <div class="hero-action-perks-list">
-              <div class="hero-action-perk-item">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Фиксированная цена в договоре</span>
+
+          </div>
+
+          <!-- Правая колонка: Визуальная витрина интерьера -->
+          <div class="hero-right-visual">
+            <div class="hero-showcase-box">
+              <img src="./assets/images/hero-ceilings-composite.jpg" alt="Дизайнерские потолки NewLine в г. Урай" class="hero-showcase-img">
+              
+              <div class="hero-glass-pill top-pill">
+                <span class="glass-pill-dot"></span>
+                <span>EuroKRAAB 2.0 • Теневой профиль</span>
               </div>
-              <div class="hero-action-perk-item">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Чистая работа перфоратором с пылесосом</span>
+
+              <div class="hero-glass-pill mid-pill">
+                <span>Световые линии SWG</span>
               </div>
-              <div class="hero-action-perk-item">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Рассрочка 0% без банков и переплат</span>
+
+              <div class="hero-glass-review">
+                <div class="hero-review-stars">★★★★★</div>
+                <div class="hero-review-info">
+                  <strong>4.9 из 5 в г. Урай</strong>
+                  <span>Более 1 000 выполненных проектов</span>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
