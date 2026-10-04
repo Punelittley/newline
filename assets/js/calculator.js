@@ -62,7 +62,7 @@ function initCeilingCalculator() {
   const CHANDELIER_PRICE = 700;    // монтаж люстры с закладной
   const LINE_PRICE_PER_M = 1900;   // световая линия с профилем и лентой
   const TRACK_PRICE_PER_M = 2900;  // магнитный шинопровод / трек
-  const CURTAIN_PRICE = 2400;      // скрытая ниша под карниз (ПК-5)
+  const CURTAIN_PRICE = 0;
   const PIPE_PRICE = 400;          // обвод труб отопления
 
   let currentTexture = 'matte';
